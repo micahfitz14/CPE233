@@ -26,4 +26,7 @@ module fibonacci_seq_gen(
     output [7:0] ssegs,
     input clk
     );
+    
+    
+    
 endmodule
