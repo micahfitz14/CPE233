@@ -12,3 +12,15 @@
 start_gui
 open_project {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr}
 update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v}}
+file delete -force {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v}
+close [ open {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter_Mem.v} w ]
+add_files {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter_Mem.v}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v} w ]
+add_files {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v} w ]
+add_files {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v}}
+update_compile_order -fileset sources_1
