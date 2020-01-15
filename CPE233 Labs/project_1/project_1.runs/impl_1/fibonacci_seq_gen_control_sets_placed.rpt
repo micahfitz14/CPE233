@@ -1,0 +1,72 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Jan 14 18:58:11 2020
+| Host         : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file fibonacci_seq_gen_control_sets_placed.rpt
+| Design       : fibonacci_seq_gen
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |     8 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|      8 |            1 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              88 |           13 |
+| No           | No                    | Yes                    |               8 |            1 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              40 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+---------------+----------------------------------+------------------+----------------+
+|        Clock Signal       | Enable Signal |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++---------------------------+---------------+----------------------------------+------------------+----------------+
+|  count_reg[25]            |               |                                  |                1 |              4 |
+|  my_univ_sseg/CLK_DIV/CLK |               |                                  |                1 |              4 |
+|  count_reg[25]            |               | ff/FSM_sequential_PS_reg[0]_0[0] |                1 |              8 |
+|  count_reg[25]            | ff/ld         |                                  |                3 |             20 |
+|  count_reg[25]            | ff/ld         | ff/FSM_sequential_PS_reg[0]_0[0] |                4 |             40 |
+|  clk_IBUF_BUFG            |               |                                  |               11 |             80 |
++---------------------------+---------------+----------------------------------+------------------+----------------+
+
+

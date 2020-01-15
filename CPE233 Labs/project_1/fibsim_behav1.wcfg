@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fibsim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="fibsim" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="947333333fs"></ZoomStartTime>
+      <ZoomEndTime time="1010533334fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="88"></NameColumnWidth>
+      <ValueColumnWidth column_width="93"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/fibsim/BTN" type="logic">
+      <obj_property name="ElementShortName">BTN</obj_property>
+      <obj_property name="ObjectShortName">BTN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/disp_en" type="array">
+      <obj_property name="ElementShortName">disp_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">disp_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/ssegs" type="array">
+      <obj_property name="ElementShortName">ssegs[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ssegs[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/my_ram/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/my_2t1_mux/SEL" type="logic">
+      <obj_property name="ElementShortName">SEL</obj_property>
+      <obj_property name="ObjectShortName">SEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/ff/PS" type="array">
+      <obj_property name="ElementShortName">PS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/ff/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/ff/ctrl" type="logic">
+      <obj_property name="ElementShortName">ctrl</obj_property>
+      <obj_property name="ObjectShortName">ctrl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/ff/ld" type="logic">
+      <obj_property name="ElementShortName">ld</obj_property>
+      <obj_property name="ObjectShortName">ld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/ff/clr" type="logic">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/MY_CNTR/rco" type="logic">
+      <obj_property name="ElementShortName">rco</obj_property>
+      <obj_property name="ObjectShortName">rco</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/fibsim/MY_CNTR/count" type="array">
+      <obj_property name="ElementShortName">count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fibsim/led" type="array">
+      <obj_property name="ElementShortName">led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">led[3:0]</obj_property>
+   </wvobject>
+</wave_config>

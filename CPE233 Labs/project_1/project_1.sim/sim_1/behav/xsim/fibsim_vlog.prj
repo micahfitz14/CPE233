@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/cntr_up_clr_nb.v" \
+"../../../../project_1.srcs/sources_1/new/fibonacci_fsm.v" \
+"../../../../project_1.srcs/sources_1/new/lab1_fibonacci_seq_gen.v" \
+"../../../../project_1.srcs/sources_1/new/mux_2t1_nb.v" \
+"../../../../project_1.srcs/sources_1/new/ram_single_port.v" \
+"../../../../project_1.srcs/sources_1/new/rca_nb.v" \
+"../../../../project_1.srcs/sources_1/new/univ_sseg.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/clk_divider_nbit.sv" \
+"../../../../project_1.srcs/sources_1/new/reg_nb.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sim_1/new/fibsim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
