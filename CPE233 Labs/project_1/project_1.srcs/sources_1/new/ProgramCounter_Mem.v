@@ -41,11 +41,20 @@ module ProgramCounter_Mem(
         .address    (addr)
         );
     
-    ram_single_port #(.n(4),.m(10)) mem (
-        .data_in (n),  // m spec
-        .addr (addr), // n spec 
-        .we  (1),
-        .clk (CLK),
-        .data_out (ir)
-        );
+    OTTER_mem_byte OTTER_MEMORY (
+         .MEM_ADDR1 (addr),
+         .MEM_ADDR2 (0),
+         .MEM_CLK (CLK),
+         .MEM_DIN2 (0),
+         .MEM_WRITE2 (0),
+         .MEM_READ1 (1),
+         .MEM_READ2 (0),
+         .IO_IN (0),
+         .MEM_SIZE (2),
+         .MEM_SIGN (0),
+         .ERR (),
+         .MEM_DOUT1 (ir),
+         .MEM_DOUT2 (),
+         .IO_WR () );
+        
 endmodule

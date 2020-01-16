@@ -1,69 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1579057021">
-  <File Type="BITSTR-BMM" Name="fibonacci_seq_gen_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="fibonacci_seq_gen_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="fibonacci_seq_gen_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="fibonacci_seq_gen_power_routed.rpt"/>
   <File Type="PA-TCL" Name="fibonacci_seq_gen.tcl"/>
-  <File Type="OPT-TIMING" Name="fibonacci_seq_gen_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="fibonacci_seq_gen_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="fibonacci_seq_gen_power_summary_routed.pb"/>
+  <File Type="BITSTR-BMM" Name="fibonacci_seq_gen_bd.bmm"/>
   <File Type="REPORTS-TCL" Name="fibonacci_seq_gen_reports.tcl"/>
-  <File Type="OPT-DRC" Name="fibonacci_seq_gen_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="fibonacci_seq_gen_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="fibonacci_seq_gen.hwdef"/>
   <File Type="PWROPT-DCP" Name="fibonacci_seq_gen_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="fibonacci_seq_gen_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="fibonacci_seq_gen_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="fibonacci_seq_gen_placed.dcp"/>
-  <File Type="PLACE-IO" Name="fibonacci_seq_gen_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="fibonacci_seq_gen_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="fibonacci_seq_gen_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="fibonacci_seq_gen_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="fibonacci_seq_gen_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="fibonacci_seq_gen_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="fibonacci_seq_gen_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="fibonacci_seq_gen.bgn"/>
-  <File Type="PLACE-TIMING" Name="fibonacci_seq_gen_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="fibonacci_seq_gen_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="fibonacci_seq_gen.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="fibonacci_seq_gen_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="fibonacci_seq_gen_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="fibonacci_seq_gen_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="fibonacci_seq_gen.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="fibonacci_seq_gen_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="fibonacci_seq_gen_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="fibonacci_seq_gen_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="fibonacci_seq_gen_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="fibonacci_seq_gen_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="fibonacci_seq_gen_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="fibonacci_seq_gen.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="fibonacci_seq_gen_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="fibonacci_seq_gen.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="fibonacci_seq_gen_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fibonacci_seq_gen_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="fibonacci_seq_gen.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fibonacci_seq_gen_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="fibonacci_seq_gen_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="fibonacci_seq_gen_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="fibonacci_seq_gen_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="fibonacci_seq_gen_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="fibonacci_seq_gen_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="fibonacci_seq_gen_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="fibonacci_seq_gen_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="fibonacci_seq_gen_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="fibonacci_seq_gen_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="fibonacci_seq_gen_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="fibonacci_seq_gen_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="fibonacci_seq_gen_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fibonacci_seq_gen_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fibonacci_seq_gen_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fibonacci_seq_gen_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fibonacci_seq_gen_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="fibonacci_seq_gen_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="fibonacci_seq_gen_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="fibonacci_seq_gen.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="fibonacci_seq_gen_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="fibonacci_seq_gen.rbt"/>
   <File Type="BITSTR-NKY" Name="fibonacci_seq_gen.nky"/>
   <File Type="BG-DRC" Name="fibonacci_seq_gen.drc"/>
