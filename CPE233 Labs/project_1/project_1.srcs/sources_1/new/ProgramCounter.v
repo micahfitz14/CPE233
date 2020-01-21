@@ -37,9 +37,9 @@ module ProgramCounter(
     mux_4t1_nb  #(.n(32)) my_4t1_mux  (
         .SEL   (pcSource), 
         .D0    (next_addr), 
-        .D1    (32'h00004444), 
-        .D2    (32'h00008888), 
-        .D3    (32'h0000CCCC),
+        .D1    (jalr), 
+        .D2    (branch), 
+        .D3    (jal),
         .D_OUT (datain)
         ); 
         
