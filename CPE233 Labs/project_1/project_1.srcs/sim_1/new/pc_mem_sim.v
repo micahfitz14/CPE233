@@ -31,6 +31,15 @@ module pc_mem_sim(
     wire [31:0] ir;
     
     ProgramCounter_Mem pcsim (.CLK(CLK), .pcSource(pcSource), .PCWrite(PCWrite), .rst(rst), .ir(ir));
+    initial
+    begin
+    rst = 0;
+    #5;
+    rst = 1;
+    #5
+    rst = 0;
+    end   
+    
     
     always
     begin
@@ -40,15 +49,7 @@ module pc_mem_sim(
     #5;
     end
     
-    always
-    begin
-    rst = 0;
-    #5;
-    rst = 1;
-    #5
-    rst = 0;
-    #70;
-    end
+
     
     always
     begin
