@@ -1,23 +1,13 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+///////////////////////////////////////////////////////
 // 
 // Create Date: 01/15/2020 12:37:29 PM
-// Design Name: 
 // Module Name: ProgramCounter_Mem
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// Project Name: lab 2
+// Description: This is a model which uses the program 
+// counter module and connects it to the memory for the 
+// RISC-V otter. 
+///////////////////////////////////////////////////////
 
 
 module ProgramCounter_Mem(

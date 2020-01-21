@@ -53,7 +53,7 @@ module pc_mem_sim(
     
     always
     begin
-    #80
+    #100
     pcSource = pcSource+1;
     end
     

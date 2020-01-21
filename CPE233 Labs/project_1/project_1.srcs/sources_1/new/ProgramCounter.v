@@ -1,24 +1,13 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+//////////////////////////////////////////////////////////// 
 // Create Date: 01/15/2020 12:37:29 PM
-// Design Name: 
 // Module Name: ProgramCounter_Mem
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// Project Name: lab 2
+// Description: This is a program counter module which has 
+// four controllable inputs and outputs a address which
+// normally increments by 4 to access the next memory location. 
 
+///////////////////////////////////////////////////////////
 
 module ProgramCounter(
     input rst,
@@ -34,6 +23,7 @@ module ProgramCounter(
     wire [31:0] next_addr;
     wire [31:0] datain;
     
+    //instantation of input MUX
     mux_4t1_nb  #(.n(32)) my_4t1_mux  (
         .SEL   (pcSource), 
         .D0    (next_addr), 
