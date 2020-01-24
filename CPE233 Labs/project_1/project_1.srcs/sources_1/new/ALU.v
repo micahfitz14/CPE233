@@ -31,7 +31,7 @@ module alu(
                             RESULT = 1;
                       else
                             RESULT = 0;
-            4'b0100 :                 
+            4'b0100 :                  
             
             default : RESULT = 0;
        endcase 
