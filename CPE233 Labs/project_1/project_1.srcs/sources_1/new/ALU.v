@@ -17,12 +17,12 @@ module alu(
         output reg [31:0] RESULT  
     );
     
-    always@(alu_fun)
+    always@(alu_fun, OP_1, OP_2)
     begin
         case(alu_fun)
         
             4'b0000 : RESULT = OP_1 + OP_2;
-            4'b0001 : RESULT = OP_1 << OP_2; //shift OP_1 left by the value of OP_2
+            4'b0001 : RESULT = OP_1 << OP_2;    //shift OP_1 left by the value of OP_2
             4'b0010 : if($signed(OP_1) < $signed(OP_2))
                             RESULT = 1;
                       else
@@ -31,8 +31,13 @@ module alu(
                             RESULT = 1;
                       else
                             RESULT = 0;
-            4'b0100 :                  
-            
+            4'b0100 : RESULT = OP_1 ^ OP_2;
+            4'b0101 : RESULT = OP_1 >> OP_2;    //shift OP_1 right by the value of OP_2
+            4'b0110 : RESULT = OP_1 | OP_2;
+            4'b0111 : RESULT = OP_1 & OP_2;
+            4'b1000 : RESULT = $signed(OP_1) - $signed(OP_2);
+            4'b1001 : RESULT = (OP_1 >> 12) & 32'hFFFFF000;
+            4'b1101 : RESULT = $signed(OP_1) >>> $signed(OP_2);   //arithmetic shift right           
             default : RESULT = 0;
        endcase 
     end

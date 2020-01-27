@@ -26,9 +26,9 @@ module tb_alu( );
    
 alu  my_alu (
     .alu_fun  (alu_fun),
-    .srcA     (srcA),
-    .srcB     (srcB),
-    .result   (result)
+    .OP_1     (srcA),
+    .OP_2     (srcB),
+    .RESULT   (result)
     );
    
    initial 
