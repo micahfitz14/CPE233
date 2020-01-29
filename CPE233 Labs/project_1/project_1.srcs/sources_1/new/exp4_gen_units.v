@@ -21,15 +21,24 @@
 
 
 module exp4_gen_units(
-
+    input rst, PCWrite, pcSource, CLK,
+    output reg [32:0] u_type_imm, s_type_imm 
     );
     
     
+    ProgramCounter mypc (
+        .rst        (rst),
+        .PCWrite    (PCWrite),
+        .pcSource   (pcSource),
+        .CLK        (CLK),
+        .jalr       (jalr),
+        .branch     (branch),
+        .jal        (jal),
+        .address    (PC) );
     
     
     
-    
-     Memory OTTER_MEMORY (
+    Memory OTTER_MEMORY (
         .MEM_CLK   (),
         .MEM_RDEN1 (), 
         .MEM_RDEN2 (), 

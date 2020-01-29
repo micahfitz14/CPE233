@@ -21,6 +21,15 @@
 
 
 module BRANCH_ADDR_GEN(
-
+       input [31:0] PC, j_type, b_type, i_type, rs,
+       output reg [31:0] jal, branch, jalr
     );
+    
+    always @(*)
+    begin
+        jal = j_type + PC;
+        jalr = i_type + PC;
+        branch = b_type + PC;
+    end
+    
 endmodule
