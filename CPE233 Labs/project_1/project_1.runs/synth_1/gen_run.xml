@@ -4,8 +4,6 @@
   <File Type="REPORTS-TCL" Name="fibonacci_seq_gen_reports.tcl"/>
   <File Type="RDS-RDS" Name="fibonacci_seq_gen.vds"/>
   <File Type="RDS-DCP" Name="fibonacci_seq_gen.dcp"/>
-  <File Type="RDS-UTIL" Name="fibonacci_seq_gen_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="fibonacci_seq_gen_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/cntr_up_clr_nb.v">
