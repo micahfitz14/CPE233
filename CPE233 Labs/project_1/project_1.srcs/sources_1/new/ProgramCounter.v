@@ -17,10 +17,10 @@ module ProgramCounter(
     input [31:0] jalr,
     input [31:0] branch,
     input [31:0] jal,
-    output [31:0] address
+    output [31:0] address,
+    output [31:0] next_addr
     );
     
-    wire [31:0] next_addr;
     wire [31:0] datain;
     
     //instantation of input MUX
