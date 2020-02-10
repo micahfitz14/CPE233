@@ -28,6 +28,7 @@
 // 
 // Revision:
 // Revision 1.00 - File Created - 02-01-2020 (from other people's files)
+//          1.01 - (02-08-2020) switched states to enum type
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -45,11 +46,13 @@ module CU_FSM(
     output logic rst
   );
     
-    reg [1:0] NS, PS;
-    
-    //- State register bit assignments
-    parameter [1:0] st_irFetch = 2'b00, st_DCDR = 2'b01, st_writeBack = 2'b10;
-  
+    typedef  enum logic [1:0] {
+       st_FET,
+       st_EX,
+       st_WB
+    }  state_type; 
+    state_type  NS,PS; 
+      
     //- datatypes for RISC-V opcode types
     typedef enum logic [6:0] {
         LUI    = 7'b0110111,
@@ -66,89 +69,89 @@ module CU_FSM(
      
 	assign OPCODE = opcode_t'(opcode); //- Cast input as enum 
 	 
-	 
 	//- state register (PS)
-	always_ff @ (posedge clk)  
-    begin
-        if(RST == 1)
+	always @ (posedge clk)  
+        if (RST == 1)
         begin
-            PS = st_irFetch;
+            PS = st_FET;
             rst = 1;
         end 
         else
-            rst = 0; 
-            PS = NS;
-    end
-       
+        begin 
+            PS = NS; 
+            rst = 0;
+        end
+    
     always_comb
     begin              
         //- schedule all output to avoid latch
-        pcWrite = 0;    regWrite = 0;      
-		memWE2 = 0;     memRDEN1 = 0;    memRDEN2 = 0;
+        pcWrite = 1'b0;    regWrite = 1'b0;      
+		memWE2 = 1'b0;     memRDEN1 = 1'b0;    memRDEN2 = 1'b0;
                    
         case (PS)
-            st_irFetch: //waiting state  
+            st_FET: //waiting state  
             begin
-                pcWrite = 0;
-                regWrite = 0;
-                memWE2 = 0;
-                memRDEN1 = 1;
-                memRDEN2 = 0;
-                   
-                NS = st_DCDR; 
+                memRDEN1 = 1'b1;                    
+                NS = st_EX; 
             end
               
-            st_DCDR: //decode + execute
+            st_EX: //decode + execute
             begin
-                pcWrite = 1;
+                pcWrite = 1'b1;
 				case (OPCODE)
 				    LOAD: 
                        begin
-                          regWrite = 0;
-                          memRDEN2 = 1;
-                          NS = st_writeBack;
+                          regWrite = 1'b0;
+                          memRDEN2 = 1'b1;
+                          NS = st_WB;
                        end
                     
 					STORE: 
                        begin
-                          NS = st_irFetch;
+                          regWrite = 1'b0;
+                          memWE2 = 1'b1;
+                          NS = st_FET;
                        end
                     
 					BRANCH: 
                        begin
-                          NS = st_irFetch;
+                          NS = st_FET;
                        end
 					
 					LUI: 
 					   begin
-					      NS = st_irFetch;
+                          regWrite = 1'b1;	
+					      NS = st_FET;
 					   end
 					  
-					OP_IMM: 
+					OP_IMM:  // addi 
 					   begin 
-					      NS = st_irFetch;
+					      regWrite = 1'b1;	
+					      NS = st_FET;
 					   end
 					
 	                JAL: 
 					   begin
-					      NS = st_irFetch;
+					      regWrite = 1'b1; 
+					      NS = st_FET;
 					   end
 					 
                     default:  
 					   begin 
-					      NS = st_irFetch;
+					      NS = st_FET;
 					   end
 					
                 endcase
             end
                
-            st_writeBack:
+            st_WB:
             begin
-               regWrite = 1; 
-               NS = st_irFetch;
+               regWrite = 1'b1; 
+               NS = st_FET;
+              // memRDEN2 = 1'b1; //should this be 0
             end
  
-            default: NS = st_irFetch;
+            default: NS = st_FET;
            
         endcase //- case statement for FSM states
     end

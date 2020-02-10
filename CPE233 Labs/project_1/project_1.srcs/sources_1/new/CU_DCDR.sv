@@ -3,13 +3,13 @@
 // Company: Ratner Surf Designs
 // Engineer: James Ratner
 // 
-// Create Date: 
+// Create Date: 01/29/2019 04:56:13 PM
 // Design Name: 
 // Module Name: CU_Decoder
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description:  Control Unit DCDR template: incomplete starter version
+// Description: 
 // 
 // Dependencies:
 // 
@@ -28,7 +28,8 @@
 //
 // 
 // Revision:
-// Revision 1.00 - File Created (02-01-2020) - from other people's work
+// Revision 1.00 - File Created (02-01-2020) - from Paul, Joseph, & Celina
+//          1.01 - (02-08-2020) - removed unneeded else's; fixed assignments
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -79,7 +80,7 @@ module CU_DCDR(
     always_comb
     begin 
         //- schedule all values to avoid latch
-		pcSource <= 01'b0;  alu_srcB <= 0; rf_wr_sel <= 0; alu_srcA <= 0; alu_fun <= 0;
+		pcSource <= 2'b00;  alu_srcB <= 2'b00; rf_wr_sel <= 2'b00; alu_srcA <= 1'b0; alu_fun <= 4'b0000;
 		
 		case(OPCODE)
 			LUI:
@@ -87,12 +88,12 @@ module CU_DCDR(
 				alu_fun <= 4'b1001; 
 				alu_srcA <= 1'd1; 
 				rf_wr_sel <= 2'd3; 
-				pcSource <= 1'b0; 
+				pcSource <= 2'b0; 
 			end
 			
 			JAL:
 			begin
-				pcSource <= 3'd3; 
+				pcSource <= 2'd3; 
 				rf_wr_sel <= 2'd0; 
 			end
 			
@@ -103,10 +104,8 @@ module CU_DCDR(
 					alu_fun <= 4'b0000; 
 					alu_srcA <= 1'd0; 
 					alu_srcB <= 2'd1; 
-					rf_wr_sel <= 2'd2; 
+					rf_wr_sel <= 2'd3; 
 				end
-				else
-					pcSource <= 3'd0;
 			end
 			
 			STORE:
@@ -116,8 +115,6 @@ module CU_DCDR(
 					alu_srcA <= 1'd0; 
 					alu_srcB <= 2'd0; 
 				end
-				else
-					pcSource <= 3'd0;
 			end
 			
 			OP_IMM:
@@ -127,14 +124,14 @@ module CU_DCDR(
 					begin
 						alu_fun <= 4'b0000;
 						alu_srcA <= 1'd0; 
-						alu_srcB <= 2'd0;
+						alu_srcB <= 2'd2;
 						rf_wr_sel <= 2'd0; 
 					end
 					
 					default: 
 					begin
-						pcSource <= 3'd0; 
-						alu_fun <= 4'b0000;
+						pcSource <= 2'd0; 
+						alu_fun <= 4'b0000;               //stopped here
 						alu_srcA <= 1'd0; 
 						alu_srcB <= 2'd0; 
 						rf_wr_sel <= 2'd0; 
@@ -144,7 +141,7 @@ module CU_DCDR(
 
 			default:
 			begin
-				 pcSource <= 3'd0; 
+				 pcSource <= 2'd0; 
 				 alu_srcB <= 2'd0; 
 				 rf_wr_sel <= 2'd0; 
 				 alu_srcA <= 1'd0; 
