@@ -85,7 +85,7 @@ module CU_DCDR(
 		case(OPCODE)
 			LUI:
 			begin
-				alu_fun <= 4'b1001; 
+				alu_fun <= 4'b1001; // isntr: lui
 				alu_srcA <= 1'd1; 
 				rf_wr_sel <= 2'd3; 
 				pcSource <= 2'b0; 
@@ -93,7 +93,7 @@ module CU_DCDR(
 			
 			JAL:
 			begin
-				pcSource <= 2'd3; 
+				pcSource <= 2'd3; // isntr: jal
 				rf_wr_sel <= 2'd0; 
 			end
 			
@@ -128,10 +128,10 @@ module CU_DCDR(
 						rf_wr_sel <= 2'd0; 
 					end
 					
-					default: 
+					default: //catch all
 					begin
 						pcSource <= 2'd0; 
-						alu_fun <= 4'b0000;               //stopped here
+						alu_fun <= 4'b0000;
 						alu_srcA <= 1'd0; 
 						alu_srcB <= 2'd0; 
 						rf_wr_sel <= 2'd0; 

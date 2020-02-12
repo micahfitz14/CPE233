@@ -21,20 +21,20 @@
 
 
 module OTTER_MCU(
-    input clk, rst,
+    input clk, RST,
     input [31:0] iobus_in, CSR_reg,
     input [1:0] intr,
     output [31:0] iobus_out, iobus_addr, iobus_wr
     );
     
-    wire [31:0] addr, next_addr, jalr, branch, jal, ir, alu_out, d_out2, reg_in, rs1, rs2;
+    wire [31:0] addr, next_addr, jalr, branch, jal, ir, d_out2, reg_in, rs1, rs2;
     wire [31:0] j_type, b_type, u_type, i_type, s_type, alu1, alu2;
     wire [3:0] alu_fun;
     wire [1:0] pcSource, alu_srcB, rf_wr_sel;
-    wire PCWrite, pc_rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA;
+    wire PCWrite, rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA;
     
     ProgramCounter pc   (
-        .rst        (pc_rst),
+        .rst        (rst),
         .PCWrite    (PCWrite),
         .pcSource   (pcSource),
         .CLK        (clk),
@@ -42,7 +42,7 @@ module OTTER_MCU(
         .branch     (branch),
         .jal        (jal),
         .address    (addr),
-        .next_adddr (next_addr)
+        .next_addr (next_addr)
         );
             
     Memory otter_memory (
@@ -51,8 +51,8 @@ module OTTER_MCU(
         .MEM_RDEN2 (memRDEN2), 
         .MEM_WE2   (memWE2),
         .MEM_ADDR1 (addr[15:2]),
-        .MEM_ADDR2 (alu_out),
-        .MEM_WD    (0),  
+        .MEM_ADDR2 (iobus_addr),
+        .MEM_WD    (1'b0),  
         .MEM_SIZE  (ir[13:12]),
         .MEM_SIGN  (ir[14]),
         .IO_IN     (iobus_in),
@@ -65,7 +65,7 @@ module OTTER_MCU(
         .D0    (next_addr), 
         .D1    (CSR_reg), 
         .D2    (d_out2), 
-        .D3    (alu_out),
+        .D3    (iobus_addr),
         .D_OUT (reg_in) );     
     
     RegFile register (
@@ -119,29 +119,29 @@ module OTTER_MCU(
         .RESULT     (iobus_addr)    );  
         
     CU_FSM cu_fsm(
-        .intr     (),
-        .clk      (),
-        .RST      (),
-        .opcode   (),   // ir[6:0]
-        .pcWrite  (),
-        .regWrite (),
-        .memWE2   (),
-        .memRDEN1 (),
-        .memRDEN2 (),
-        .rst      ()   );
+        .intr     (1'b0),
+        .clk      (clk),
+        .RST      (RST),
+        .opcode   (ir[6:0]),   // ir[6:0]
+        .pcWrite  (PCWrite),
+        .regWrite (regWrite),
+        .memWE2   (memWE2),
+        .memRDEN1 (memRDEN1),
+        .memRDEN2 (memRDEN2),
+        .rst      (rst)   );
     
     CU_DCDR cu_dcdr(
-       .br_eq     (), 
-       .br_lt     (), 
-       .br_ltu    (),
-       .opcode    (),    //-  ir[6:0]
-       .func7     (),    //-  ir[31:25]
-       .func3     (),    //-  ir[14:12] 
-       .alu_fun   (),
-       .pcSource  (),
-       .alu_srcA  (),
-       .alu_srcB  (), 
-       .rf_wr_sel ()   );
+       .br_eq     (1'b0), 
+       .br_lt     (1'b0), 
+       .br_ltu    (1'b0),
+       .opcode    (ir[6:0]),    //-  ir[6:0]
+       .func7     (ir[31:25]),    //-  ir[31:25]
+       .func3     (ir[14:12]),    //-  ir[14:12] 
+       .alu_fun   (alu_fun),
+       .pcSource  (pcSource),
+       .alu_srcA  (alu_srcA),
+       .alu_srcB  (alu_srcB), 
+       .rf_wr_sel (rf_wr_sel)   );
             
         
 endmodule

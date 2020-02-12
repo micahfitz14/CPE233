@@ -23,10 +23,10 @@
 //    .MEM_CLK   (),
 //    .MEM_RDEN1 (), 
 //    .MEM_RDEN2 (), 
-//    .MEM_WE2   (),
+//    .MEM_WE2,  (),
 //    .MEM_ADDR1 (),
 //    .MEM_ADDR2 (),
-//    .MEM_WD    (),  
+//    .MEM_DIN2  (),  
 //    .MEM_SIZE  (),
 //    .MEM_SIGN  (),
 //    .IO_IN     (),
@@ -36,8 +36,10 @@
 //
 // Revision:
 // Revision 0.01 - Original by J. Callenes
-// Revision 0.02 - Rewrite to simplify logic by P. Hummel
-// Revision 0.03 - changed signal names, added instantiation template
+// Revision 1.02 - Rewrite to simplify logic by P. Hummel
+// Revision 1.03 - changed signal names, added instantiation template
+// Revision 1.04 - added defualt to write case statement
+// Revision 1.05 - changed MEM_WD to MEM_DIN2, changed default to save nothing
 //
 //////////////////////////////////////////////////////////////////////////////////
                                                                                                                              
@@ -48,7 +50,7 @@
     input MEM_WE2,          // write enable.
     input [13:0] MEM_ADDR1, // Instruction Memory word Addr (Connect to PC[15:2])
     input [31:0] MEM_ADDR2, // Data Memory Addr
-    input [31:0] MEM_WD,    // Data to save
+    input [31:0] MEM_DIN2,  // Data to save
     input [1:0] MEM_SIZE,   // 0-Byte, 1-Half, 2-Word
     input MEM_SIGN,         // 1-unsigned 0-signed
     input [31:0] IO_IN,     // Data from IO     
@@ -89,14 +91,17 @@
       // save data (WD) to memory (ADDR2)
       if (weAddrValid == 1) begin  //(MEM_WE == 1) && (MEM_ADDR2 < 16'hFFFD)) begin   // write enable and valid address space
         case({MEM_SIZE,byteOffset})
-            4'b0000: memory[wordAddr2][7:0]   <= MEM_WD[7:0];     // sb at byte offsets
-            4'b0001: memory[wordAddr2][15:8]  <= MEM_WD[7:0];
-            4'b0010: memory[wordAddr2][23:16] <= MEM_WD[7:0];
-            4'b0011: memory[wordAddr2][31:24] <= MEM_WD[7:0];
-            4'b0100: memory[wordAddr2][15:0]  <= MEM_WD[15:0];    // sh at byte offsets
-            4'b0101: memory[wordAddr2][23:8]  <= MEM_WD[15:0];
-            4'b0110: memory[wordAddr2][31:16] <= MEM_WD[15:0];
-            4'b1000: memory[wordAddr2]        <= MEM_WD;          // sw
+            4'b0000: memory[wordAddr2][7:0]   <= MEM_DIN2[7:0];     // sb at byte offsets
+            4'b0001: memory[wordAddr2][15:8]  <= MEM_DIN2[7:0];
+            4'b0010: memory[wordAddr2][23:16] <= MEM_DIN2[7:0];
+            4'b0011: memory[wordAddr2][31:24] <= MEM_DIN2[7:0];
+            4'b0100: memory[wordAddr2][15:0]  <= MEM_DIN2[15:0];    // sh at byte offsets
+            4'b0101: memory[wordAddr2][23:8]  <= MEM_DIN2[15:0];
+            4'b0110: memory[wordAddr2][31:16] <= MEM_DIN2[15:0];
+            4'b1000: memory[wordAddr2]        <= MEM_DIN2;          // sw
+			
+			//default: memory[wordAddr2] <= 32'b0  // unsupported size, byte offset combination
+			// removed to avoid mistakes causing memory to be zeroed.
         endcase
       end
 
@@ -131,21 +136,21 @@
             5'b10101: memReadSized = {16'd0,memReadWord[23:8]};
             5'b10100: memReadSized = {16'd0,memReadWord[15:0]};
             
-            default:    memReadSized=32'b0; // unsupported size, byte offset combination 
+            default:  memReadSized = 32'b0;     // unsupported size, byte offset combination 
         endcase
     end
  
     // Memory Mapped IO 
     always_comb begin
-        if(MEM_ADDR2 >= 32'h4000) begin  // MMIO address range
-            IO_WR = MEM_WE2;             // IO Write
-            MEM_DOUT2 = ioBuffer;       // IO read from buffer
-            weAddrValid = 0;            // address beyond memory range
+        if(MEM_ADDR2 >= 32'h00010000) begin  // MMIO address range
+            IO_WR = MEM_WE2;                 // IO Write
+            MEM_DOUT2 = ioBuffer;            // IO read from buffer
+            weAddrValid = 0;                 // address beyond memory range
         end 
         else begin
             IO_WR = 0;                  // not MMIO
             MEM_DOUT2 = memReadSized;   // output sized and sign extended data
-            weAddrValid = MEM_WE2;       // address in valid memory range
+            weAddrValid = MEM_WE2;      // address in valid memory range
         end
     end
         
