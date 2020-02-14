@@ -6,7 +6,7 @@
 // Create Date: 01/07/2020 12:59:51 PM
 // Design Name: 
 // Module Name: tb
-// Project Name: 
+// Project Name: MCU testpench
 // Target Devices: 
 // Tool Versions: 
 // Description: Testbench file for Exp 5
@@ -50,8 +50,14 @@ OTTER_MCU  my_otter(
       RST=1;
       intr=0;
       iobus_in = 32'h0000FEED;  
+    //  iobus_addr = 32'h11008000;
     
-      #40
+      #40   //iobus_in = 32'hFFFFFFFF;
+//          //  iobus_addr = 32'h11008000;
+      
+//      #40   iobus_in = 32'b00000000;
+//          //  iobus_addr = 32'h11008000;
+                   
 
       RST = 0;  
 

@@ -24,7 +24,8 @@ module OTTER_MCU(
     input clk, RST,
     input [31:0] iobus_in, CSR_reg,
     input [1:0] intr,
-    output [31:0] iobus_out, iobus_addr, iobus_wr
+    output [31:0] iobus_out, iobus_addr, 
+    output iobus_wr
     );
     
     wire [31:0] addr, next_addr, jalr, branch, jal, ir, d_out2, reg_in, rs1, rs2;
@@ -32,6 +33,8 @@ module OTTER_MCU(
     wire [3:0] alu_fun;
     wire [1:0] pcSource, alu_srcB, rf_wr_sel;
     wire PCWrite, rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA;
+    
+    assign iobus_out = rs2;
     
     ProgramCounter pc   (
         .rst        (rst),
@@ -52,7 +55,7 @@ module OTTER_MCU(
         .MEM_WE2   (memWE2),
         .MEM_ADDR1 (addr[15:2]),
         .MEM_ADDR2 (iobus_addr),
-        .MEM_WD    (1'b0),  
+        .MEM_DIN2    (1'b0),  
         .MEM_SIZE  (ir[13:12]),
         .MEM_SIGN  (ir[14]),
         .IO_IN     (iobus_in),

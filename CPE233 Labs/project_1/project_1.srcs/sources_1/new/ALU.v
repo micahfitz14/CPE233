@@ -36,7 +36,7 @@ module alu(
             4'b0110 : RESULT = OP_1 | OP_2;
             4'b0111 : RESULT = OP_1 & OP_2;
             4'b1000 : RESULT = $signed(OP_1) - $signed(OP_2);
-            4'b1001 : RESULT = (OP_1 >> 12) & 32'hFFFFF000;
+            4'b1001 : RESULT = OP_1;
             4'b1101 : RESULT = $signed(OP_1) >>> $signed(OP_2);   //arithmetic shift right           
             default : RESULT = 0;
        endcase 

@@ -44,7 +44,7 @@ module ProgramCounter(
     cntr_up_clr_nb #(.n(32)) MY_CNTR (
         .clk   (CLK), 
         .clr   (rst), 
-        .up    (1),
+        .up    (0),
         .ld    (PCWrite), 
         .D     (datain), 
         .count (address), 

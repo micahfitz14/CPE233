@@ -104,7 +104,7 @@ module CU_DCDR(
 					alu_fun <= 4'b0000; 
 					alu_srcA <= 1'd0; 
 					alu_srcB <= 2'd1; 
-					rf_wr_sel <= 2'd3; 
+					rf_wr_sel <= 2'd2; 
 				end
 			end
 			
@@ -113,7 +113,7 @@ module CU_DCDR(
 				if(FUNC3 == 3'b010) begin   // instr: SW
 					alu_fun <= 4'b0000; 
 					alu_srcA <= 1'd0; 
-					alu_srcB <= 2'd0; 
+					alu_srcB <= 2'd2; 
 				end
 			end
 			
@@ -124,8 +124,8 @@ module CU_DCDR(
 					begin
 						alu_fun <= 4'b0000;
 						alu_srcA <= 1'd0; 
-						alu_srcB <= 2'd2;
-						rf_wr_sel <= 2'd0; 
+						alu_srcB <= 2'd1;
+						rf_wr_sel <= 2'd3; 
 					end
 					
 					default: //catch all
