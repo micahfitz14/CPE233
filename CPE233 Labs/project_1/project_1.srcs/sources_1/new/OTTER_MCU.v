@@ -1,23 +1,16 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+////////////////////////////////////////////////////////////////
+// Engineers: Micah Fitzgerald and Ryan Madden
 // 
 // Create Date: 02/05/2020 12:19:19 PM
-// Design Name: 
 // Module Name: OTTER_MCU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
+// Project Name: lab 5
+// Description: This is the top level implementation of the 
+// RISC-V OTTER MCU. It contains all the submodules for a working 
+// computer
 // Revision 0.01 - File Created
-// Additional Comments:
 // 
-//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 
 
 module OTTER_MCU(

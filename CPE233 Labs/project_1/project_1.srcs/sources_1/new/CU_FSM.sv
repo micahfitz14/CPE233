@@ -1,15 +1,11 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company:  Ratner Surf Designs
-// Engineer: James Ratner
+//////////////////////////////////////////////////////////////////
+// Engineers: Micah Fitzgerald and Ryan Madden
 // 
 // Create Date: 01/07/2020 09:12:54 PM
-// Design Name: 
 // Module Name: top_level
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: Control Unit Template/Starter File for RISC-V OTTER
+// Project Name: lab 5
+// Description: Control Unit for lab 5 with 8 instructions supported
 //
 //    //- instantiation template 
 //    module CU_FSM(

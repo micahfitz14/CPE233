@@ -1,18 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: Ratner Surf Designs
-// Engineer: James Ratner
+// Engineers: Micah Fitzgerald and Ryan Madden
 // 
 // Create Date: 01/29/2019 04:56:13 PM
-// Design Name: 
 // Module Name: CU_Decoder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies:
-// 
+// Project Name: lab 5
+// Description: Control Decoder for RISC-V OTTER
+// // 
 // CU_DCDR my_cu_dcdr(
 //   .br_eq     (), 
 //   .br_lt     (), 
