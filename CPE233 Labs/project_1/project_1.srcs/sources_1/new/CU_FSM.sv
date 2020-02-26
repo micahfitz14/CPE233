@@ -131,7 +131,13 @@ module CU_FSM(
 					      regWrite = 1'b1; 
 					      NS = st_FET;
 					   end
-					 
+					   
+					OP_RG3:
+					   begin
+					       regWrite = 1'b1;
+					       NS = st_FET;
+					   end
+					   
                     default:  
 					   begin 
 					      NS = st_FET;
@@ -144,7 +150,6 @@ module CU_FSM(
             begin
                regWrite = 1'b1; 
                NS = st_FET;
-              // memRDEN2 = 1'b1; //should this be 0
             end
  
             default: NS = st_FET;

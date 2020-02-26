@@ -79,36 +79,47 @@ module CU_DCDR(
 		case(OPCODE)
 			LUI:
 			begin
-				alu_fun <= 4'b1001; // isntr: lui
-				alu_srcA <= 1'd1; 
-				rf_wr_sel <= 2'd3; 
-				pcSource <= 2'b0; 
+				alu_fun = 4'b1001; // isntr: lui
+				alu_srcA = 1'b1; 
+				rf_wr_sel = 2'b11; 
+				pcSource = 2'b00; 
 			end
+			
+			AUIPC:
+			begin
+			     alu_fun = 4'b0000; // instr: auipc
+			     alu_srcA = 1'b1;
+			     alu_srcB = 2'b11;
+			     rf_wr_sel = 2'b11;
+			     pcSource = 2'b00;
+			end	
 			
 			JAL:
 			begin
-				pcSource <= 2'd3; // isntr: jal
-				rf_wr_sel <= 2'd0; 
+				pcSource = 2'b11; // isntr: jal
+				rf_wr_sel = 2'b00; 
 			end
+			
+			JALR: // isntr: jalr
+			begin
+			    rf_wr_sel = 2'b00;
+                pcSource = 2'b01; 
+            end
 			
 			LOAD: 
 			begin
-				if(FUNC3 == 3'b010)   // instr: LW 
-				begin 
-					alu_fun <= 4'b0000; 
-					alu_srcA <= 1'd0; 
-					alu_srcB <= 2'd1; 
-					rf_wr_sel <= 2'd2; 
-				end
+                alu_fun = 4'b0000; 
+                alu_srcA = 1'd0; 
+                alu_srcB = 2'd1; 
+                rf_wr_sel = 2'd2;
 			end
 			
 			STORE:
 			begin
-				if(FUNC3 == 3'b010) begin   // instr: SW
-					alu_fun <= 4'b0000; 
-					alu_srcA <= 1'd0; 
-					alu_srcB <= 2'd2; 
-				end
+                          // instr: SW
+                alu_fun = 4'b0000; 
+                alu_srcA = 1'd0; 
+                alu_srcB = 2'd2; 
 			end
 			
 			OP_IMM:
@@ -116,30 +127,30 @@ module CU_DCDR(
 				case(FUNC3)
 					3'b000: // instr: ADDI
 					begin
-						alu_fun <= 4'b0000;
-						alu_srcA <= 1'd0; 
-						alu_srcB <= 2'd1;
-						rf_wr_sel <= 2'd3; 
+						alu_fun = 4'b0000;
+						alu_srcA = 1'd0; 
+						alu_srcB = 2'd1;
+						rf_wr_sel = 2'd3; 
 					end
 					
 					default: //catch all
 					begin
-						pcSource <= 2'd0; 
-						alu_fun <= 4'b0000;
-						alu_srcA <= 1'd0; 
-						alu_srcB <= 2'd0; 
-						rf_wr_sel <= 2'd0; 
+						pcSource = 2'd0; 
+						alu_fun = 4'b0000;
+						alu_srcA = 1'd0; 
+						alu_srcB = 2'd0; 
+						rf_wr_sel = 2'd0; 
 					end
 				endcase
 			end
 
 			default:
 			begin
-				 pcSource <= 2'd0; 
-				 alu_srcB <= 2'd0; 
-				 rf_wr_sel <= 2'd0; 
-				 alu_srcA <= 1'd0; 
-				 alu_fun <= 4'b0000;
+				 pcSource = 2'd0; 
+				 alu_srcB = 2'd0; 
+				 rf_wr_sel = 2'd0; 
+				 alu_srcA = 1'd0; 
+				 alu_fun = 4'b0000;
 			end
 			endcase
     end
