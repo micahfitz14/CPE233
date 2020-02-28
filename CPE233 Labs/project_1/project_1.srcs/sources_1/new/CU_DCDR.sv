@@ -118,29 +118,60 @@ module CU_DCDR(
 			BRANCH:
 			begin
 			    case(FUNC3)
-			         3'b000:
-			         begin
-			             pcSource = 2'b00;
+                     3'b000:
+                     begin
+                        if (br_eq)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
                      end
                      
                      3'b001:
                      begin
-                        pcSource = 2'b00;
+                        if (br_eq == 0)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
                      end
                      
-             `       3'b010:
+                     3'b100:
                      begin
-                         pcSource = 2'b00;
+                        if (br_lt && br_eq == 0)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
                      end
                      
-                     3'b011:
+                     3'b101:
                      begin
-                        pcSource = 2'b00;
+                        if (br_lt == 0 && br_eq == 0)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
+                     end
+                     
+                     3'b110:
+                     begin
+                        if (br_ltu && br_eq == 0)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
+                     end
+                     
+                     3'b111:
+                     begin
+                        if (br_ltu && br_eq == 0)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
                      end
                      
                      default:
                      begin
-                     
+                        if (br_eq)
+                            pcSource = 2'b10;
+                        else
+                            pcSource = 2'b00;
                      end
 			     endcase
 			end
