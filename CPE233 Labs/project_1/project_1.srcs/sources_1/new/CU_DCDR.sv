@@ -112,6 +112,37 @@ module CU_DCDR(
                 alu_srcA = 1'd0; 
                 alu_srcB = 2'd1; 
                 rf_wr_sel = 2'd2;
+                pcSource = 2'b00;
+			end
+			
+			BRANCH:
+			begin
+			    case(FUNC3)
+			         3'b000:
+			         begin
+			             pcSource = 2'b00;
+                     end
+                     
+                     3'b001:
+                     begin
+                        pcSource = 2'b00;
+                     end
+                     
+             `       3'b010:
+                     begin
+                         pcSource = 2'b00;
+                     end
+                     
+                     3'b011:
+                     begin
+                        pcSource = 2'b00;
+                     end
+                     
+                     default:
+                     begin
+                     
+                     end
+			     endcase
 			end
 			
 			STORE:
