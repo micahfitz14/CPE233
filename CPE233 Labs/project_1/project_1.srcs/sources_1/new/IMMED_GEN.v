@@ -24,13 +24,13 @@ module IMMED_GEN(
     begin
     
         // generate immediate value for i-type instruction
-        i_type = {{20{ir[31]}}, ir[30:20]};
+        i_type = {{21{ir[31]}}, ir[30:20]};
         
         // generate immediate value for s-type instruction
-        s_type = {{20{ir[31]}}, ir[30:25], ir[11:7]};
+        s_type = {{21{ir[31]}}, ir[30:25], ir[11:7]};
         
         // generate immediate value for b-type instruction
-        b_type = {{19{ir[31]}}, ir[7], ir[30:25], ir[11:8], 1'b0};
+        b_type = {{20{ir[31]}}, ir[7], ir[30:25], ir[11:8], 1'b0};
         
         // generate immediate value for u-type instruction
         u_type = {ir[31:12], {12{1'b0}}};
