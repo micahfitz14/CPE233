@@ -64,18 +64,16 @@ module CU_FSM(
 	opcode_t OPCODE;    //- symbolic names for instruction opcodes
      
 	assign OPCODE = opcode_t'(opcode); //- Cast input as enum 
-	 
+	assign rst = RST; 
 	//- state register (PS)
 	always @ (posedge clk)  
         if (RST == 1)
         begin
-            PS = st_FET;
-            rst = 1;
+            PS <= st_FET;
         end 
         else
         begin 
-            PS = NS; 
-            rst = 0;
+            PS <= NS;
         end
     
     always_comb
@@ -149,6 +147,7 @@ module CU_FSM(
             st_WB:
             begin
                regWrite = 1'b1; 
+               memRDEN2 = 1'b1;
                NS = st_FET;
             end
  

@@ -74,7 +74,7 @@ module CU_DCDR(
     always_comb
     begin 
         //- schedule all values to avoid latch
-		pcSource <= 2'b00;  alu_srcB <= 2'b00; rf_wr_sel <= 2'b00; alu_srcA <= 1'b0; alu_fun <= 4'b0000;
+		pcSource = 2'b00;  alu_srcB = 2'b00; rf_wr_sel = 2'b00; alu_srcA = 1'b0; alu_fun = 4'b0000;
 		
 		case(OPCODE)
 			LUI:
@@ -102,7 +102,10 @@ module CU_DCDR(
 			
 			JALR: // isntr: jalr
 			begin
-			    rf_wr_sel = 2'b00;
+                alu_fun = 4'b0000; 
+                alu_srcA = 1'd0; 
+                alu_srcB = 2'b01; 
+                rf_wr_sel = 2'b00;
                 pcSource = 2'b01; 
             end
 			
@@ -118,15 +121,15 @@ module CU_DCDR(
 			BRANCH:
 			begin
 			    case(FUNC3)
-                     3'b000:
+                     3'b000:    // instr: BEQ
                      begin
-                        if (br_eq)
-                            pcSource = 2'b10;
+                        if (br_eq == 1)
+                            pcSource = 2'b11;
                         else
                             pcSource = 2'b00;
                      end
                      
-                     3'b001:
+                     3'b001:    // instr: BNE
                      begin
                         if (br_eq == 0)
                             pcSource = 2'b10;
@@ -134,15 +137,15 @@ module CU_DCDR(
                             pcSource = 2'b00;
                      end
                      
-                     3'b100:
+                     3'b100:    // instr: BLT
                      begin
-                        if (br_lt && br_eq == 0)
+                        if (br_lt == 1 && br_eq == 0)
                             pcSource = 2'b10;
                         else
                             pcSource = 2'b00;
                      end
                      
-                     3'b101:
+                     3'b101:    // instr: BGE
                      begin
                         if (br_lt == 0 && br_eq == 0)
                             pcSource = 2'b10;
@@ -150,7 +153,7 @@ module CU_DCDR(
                             pcSource = 2'b00;
                      end
                      
-                     3'b110:
+                     3'b110:    // instr: BLTU
                      begin
                         if (br_ltu && br_eq == 0)
                             pcSource = 2'b10;
@@ -158,7 +161,7 @@ module CU_DCDR(
                             pcSource = 2'b00;
                      end
                      
-                     3'b111:
+                     3'b111:    // instr: BGEU
                      begin
                         if (br_ltu && br_eq == 0)
                             pcSource = 2'b10;
@@ -178,10 +181,10 @@ module CU_DCDR(
 			
 			STORE:
 			begin
-                          // instr: SW
                 alu_fun = 4'b0000; 
                 alu_srcA = 1'd0; 
-                alu_srcB = 2'd2; 
+                alu_srcB = 2'd2;
+                pcSource = 2'b00; 
 			end
 			
 			OP_IMM:
@@ -195,6 +198,70 @@ module CU_DCDR(
 						rf_wr_sel = 2'd3; 
 					end
 					
+                    3'b010: // instr: SLTI
+                    begin
+                        alu_fun = 4'b0010;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3; 
+                    end
+                    
+                    3'b011: // instr: SLTIU
+                    begin
+                        alu_fun = 4'b0011;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3;
+                    end
+                    
+                    3'b100: // instr: ORI
+                    begin
+                        alu_fun = 4'b0110;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3;
+                    end
+                    
+                    3'b110: // instr: XORI
+                    begin
+                        alu_fun = 4'b0100;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3;
+                    end
+                    
+                    3'b111: // instr: ANDI
+                    begin
+                        alu_fun = 4'b0111;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3;
+                    end
+                    
+                    3'b001: // instr: SLLI
+                    begin
+                        alu_fun = 4'b0001;
+                        alu_srcA = 1'd0; 
+                        alu_srcB = 2'd1;
+                        rf_wr_sel = 2'd3;
+                    end
+                    
+                    3'b101:
+                    if(func7 == 7'b0000000) // instr: SLRI
+                        begin
+                            alu_fun = 4'b0101;
+                            alu_srcA = 1'd0; 
+                            alu_srcB = 2'd1;
+                            rf_wr_sel = 2'd3;
+                        end
+                    else                    // instr: SRAI
+                        begin
+                            alu_fun = 4'b1101;
+                            alu_srcA = 1'd0; 
+                            alu_srcB = 2'd1;
+                            rf_wr_sel = 2'd3;
+                        end
+
 					default: //catch all
 					begin
 						pcSource = 2'd0; 
@@ -204,17 +271,63 @@ module CU_DCDR(
 						rf_wr_sel = 2'd0; 
 					end
 				endcase
-			end
+			 end
+			
+			 OP_RG3:
+             begin
+			     alu_srcA = 1'd0;
+			     alu_srcB = 2'd0;
+			     pcSource = 2'b00;
+			     rf_wr_sel = 2'b11;
+			     case(FUNC3)
+			         3'b000:
+			         begin
+			             if(func7 == 7'b0000000) // ADD
+			                 alu_fun = 4'b0000;
+			             else
+			                 alu_fun = 4'b1000; // SUB
+			         end
+			         
+			         3'b001: // SLL
+			             alu_fun = 4'b0001;
+			         
+			         3'b010: // SLT
+			             alu_fun = 4'b0010;
+			         
+			         3'b011: // SLTU
+			             alu_fun = 4'b0011; 
+			       
+			         3'b100: // XOR     
+			             alu_fun = 4'b0100;
+			         
+			         3'b101:
+			         begin
+                         if(func7 == 7'b0000000) // SRL
+                             alu_fun = 4'b0101;
+                         else                    // SRA
+                             alu_fun = 4'b1101;
+			         end
+			         
+			         3'b110: // OR
+			             alu_fun = 4'b0110;
+			         
+			         3'b111: // AND
+			             alu_fun = 4'b0111;
+			         
+			         default:
+			             alu_fun = 4'b0000;
+                 endcase    
+             end
+			 
 
-			default:
-			begin
+			 default:
+             begin
 				 pcSource = 2'd0; 
 				 alu_srcB = 2'd0; 
 				 rf_wr_sel = 2'd0; 
 				 alu_srcA = 1'd0; 
-				 alu_fun = 4'b0000;
-			end
-			endcase
+		         alu_fun = 4'b0000;
+			 end
+        endcase
     end
-
 endmodule

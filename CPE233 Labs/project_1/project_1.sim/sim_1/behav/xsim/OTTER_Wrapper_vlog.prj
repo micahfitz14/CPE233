@@ -1,0 +1,56 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/ALU.v" \
+"../../../../project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v" \
+"../../../../project_1.srcs/sources_1/new/IMMED_GEN.v" \
+"../../../../project_1.srcs/sources_1/new/ProgramCounter.v" \
+"../../../../project_1.srcs/sources_1/new/cntr_up_clr_nb.v" \
+"../../../../project_1.srcs/sources_1/new/mux_2t1_nb.v" \
+"../../../../project_1.srcs/sources_1/new/mux_4t1_nb.v" \
+"../../../../project_1.srcs/sources_1/new/rca_nb.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/CU_DCDR.sv" \
+"../../../../project_1.srcs/sources_1/new/CU_FSM.sv" \
+"../../../../project_1.srcs/sources_1/new/reg_file_v_1_00.v" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/OTTER_MCU.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/exp4_gen_units.v" \
+"../../../../project_1.srcs/sources_1/new/fibonacci_fsm.v" \
+"../../../../project_1.srcs/sources_1/new/ram_single_port.v" \
+"../../../../project_1.srcs/sources_1/new/univ_sseg.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/clk_divider_nbit.sv" \
+"../../../../project_1.srcs/sources_1/new/reg_nb.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/lab1_fibonacci_seq_gen.v" \
+"../../../../project_1.srcs/sources_1/new/ProgramCounter_Mem.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/officer_mem.sv" \
+"../../../../project_1.srcs/sources_1/new/otter_memory_v1_05.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/BRANCH_COND_GEN.v" \
+"../../../../project_1.srcs/sim_1/new/fibsim.v" \
+"../../../../project_1.srcs/sim_1/new/otter_tb.v" \
+"../../../../project_1.srcs/sim_1/new/pc_mem_sim.v" \
+"../../../../project_1.srcs/sim_1/new/tb_2.v" \
+"../../../../project_1.srcs/sim_1/new/tb_alu_lab3.v" \
+
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sim_1/new/clocksim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

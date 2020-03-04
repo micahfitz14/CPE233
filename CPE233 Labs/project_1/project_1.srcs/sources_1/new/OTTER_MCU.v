@@ -25,7 +25,7 @@ module OTTER_MCU(
     wire [31:0] j_type, b_type, u_type, i_type, s_type, alu1, alu2;
     wire [3:0] alu_fun;
     wire [1:0] pcSource, alu_srcB, rf_wr_sel;
-    wire PCWrite, rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA;
+    wire PCWrite, rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA, br_eq, br_lt, br_ltu;
     
     assign iobus_out = rs2;
     
@@ -38,7 +38,7 @@ module OTTER_MCU(
         .branch     (branch),
         .jal        (jal),
         .address    (addr),
-        .next_addr (next_addr)
+        .next_addr  (next_addr)
         );
             
     Memory otter_memory (
@@ -127,17 +127,24 @@ module OTTER_MCU(
         .rst      (rst)   );
     
     CU_DCDR cu_dcdr(
-       .br_eq     (1'b0), 
-       .br_lt     (1'b0), 
-       .br_ltu    (1'b0),
-       .opcode    (ir[6:0]),    //-  ir[6:0]
-       .func7     (ir[31:25]),    //-  ir[31:25]
-       .func3     (ir[14:12]),    //-  ir[14:12] 
-       .alu_fun   (alu_fun),
-       .pcSource  (pcSource),
-       .alu_srcA  (alu_srcA),
-       .alu_srcB  (alu_srcB), 
-       .rf_wr_sel (rf_wr_sel)   );
+        .br_eq     (br_eq), 
+        .br_lt     (br_lt), 
+        .br_ltu    (br_ltu),
+        .opcode    (ir[6:0]),    //-  ir[6:0]
+        .func7     (ir[31:25]),    //-  ir[31:25]
+        .func3     (ir[14:12]),    //-  ir[14:12] 
+        .alu_fun   (alu_fun),
+        .pcSource  (pcSource),
+        .alu_srcA  (alu_srcA),
+        .alu_srcB  (alu_srcB), 
+        .rf_wr_sel (rf_wr_sel)   );
+       
+    BRANCH_COND_GEN condgen(
+        .rs1        (rs1),
+        .rs2        (rs2),
+        .br_eq      (br_eq),
+        .br_lt      (br_lt),
+        .br_ltu     (br_ltu)    );         
             
         
 endmodule

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Feb 14 13:43:01 2020
-| Host             : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
+| Date             : Wed Mar  4 12:42:18 2020
+| Host             : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
 | Command          : report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx
 | Design           : OTTER_Wrapper
 | Device           : xc7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.090        |
+| Total On-Chip Power (W)  | 0.071        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.017        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.002        |
+| Device Static (W)        | 0.069        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
 | Junction Temperature (C) | 25.4         |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.006 |     1136 |       --- |             --- |
-|   LUT as Logic           |     0.005 |      699 |     20800 |            3.36 |
+| Clocks                   |     0.001 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |     2311 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1499 |     20800 |            7.21 |
+|   CARRY4                 |    <0.001 |       93 |      8150 |            1.14 |
+|   Register               |    <0.001 |      194 |     41600 |            0.47 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
-|   F7/F8 Muxes            |    <0.001 |      131 |     32600 |            0.40 |
-|   CARRY4                 |    <0.001 |       32 |      8150 |            0.39 |
-|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Register               |    <0.001 |      122 |     41600 |            0.29 |
-|   Others                 |     0.000 |       10 |       --- |             --- |
-| Signals                  |     0.009 |     1862 |       --- |             --- |
-| Block RAM                |     0.002 |       16 |        50 |           32.00 |
-| I/O                      |    <0.001 |       50 |       106 |           47.17 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.090 |          |           |                 |
+|   F7/F8 Muxes            |    <0.001 |      156 |     32600 |            0.48 |
+|   Others                 |     0.000 |       16 |       --- |             --- |
+|   BUFG                   |     0.000 |        1 |        32 |            3.13 |
+| Signals                  |    <0.001 |     2788 |       --- |             --- |
+| Block RAM                |     0.000 |       16 |        50 |           32.00 |
+| I/O                      |    <0.001 |       46 |       106 |           43.40 |
+| Static Power             |     0.069 |          |           |                 |
+| Total                    |     0.071 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.027 |       0.017 |      0.010 |
+| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -131,7 +131,7 @@ Table of Contents
 +-------------+--------+-----------------+
 | Clock       | Domain | Constraint (ns) |
 +-------------+--------+-----------------+
-| sys_clk_pin | clk    |            10.0 |
+| sys_clk_pin | CLK    |            10.0 |
 +-------------+--------+-----------------+
 
 
@@ -144,15 +144,20 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| OTTER_Wrapper                    |     0.017 |
-|   my_otter                       |     0.016 |
-|     arithmitic_logic_unit        |    <0.001 |
-|     branch_address_generator     |    <0.001 |
-|     cu_fsm                       |    <0.001 |
-|     otter_memory                 |     0.014 |
-|     pc                           |    <0.001 |
-|       MY_CNTR                    |    <0.001 |
-|       MY_RCA                     |    <0.001 |
+| OTTER_Wrapper                    |     0.002 |
+|   SSG_DISP                       |    <0.001 |
+|     CathMod                      |    <0.001 |
+|   clkDIv                         |    <0.001 |
+|   my_otter                       |    <0.001 |
+|     alu_src1_mux                 |    <0.001 |
+|     alu_src2_mux                 |    <0.001 |
+|     condgen                      |    <0.001 |
+|     cu_fsm                       |     0.000 |
+|     otter_memory                 |    <0.001 |
+|     pc                           |     0.000 |
+|       MY_CNTR                    |     0.000 |
+|       MY_RCA                     |     0.000 |
+|     reg_input_mux                |    <0.001 |
 |     register                     |    <0.001 |
 |       reg_file_reg_r1_0_31_0_5   |    <0.001 |
 |       reg_file_reg_r1_0_31_12_17 |    <0.001 |

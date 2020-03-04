@@ -1,0 +1,714 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 2940
+License: Customer
+
+Current time: 	Mon Mar 02 11:56:37 PST 2020
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 221 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Ryan Madden
+User home directory: C:/Users/Ryan Madden
+User working directory: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Ryan Madden/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Ryan Madden/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Ryan Madden/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/vivado.log
+Vivado journal file location: 	C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/vivado.jou
+Engine tmp dir: 	C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/.Xil/Vivado-2940-DESKTOP-GK9T8HV
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	191 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 495 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 78 MB (+79361kb) [00:00:07]
+// [Engine Memory]: 481 MB (+352602kb) [00:00:07]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Ryan Madden\Documents\GitHub\CPE233\CPE233 Labs\project_1\project_1.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 568 MB (+66794kb) [00:00:12]
+// [Engine Memory]: 605 MB (+8478kb) [00:00:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 609 MB. GUI used memory: 41 MB. Current time: 3/2/20 11:56:43 AM PST
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 860.422 ; gain = 142.449 
+// Project name: project_1; location: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v)]", 2); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), branch_address_generator : BRANCH_ADDR_GEN (BRANCH_ADDR_GEN.v)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), cu_dcdr : CU_DCDR (CU_DCDR.sv)]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), cu_dcdr : CU_DCDR (CU_DCDR.sv)]", 13, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("CU_DCDR.sv", 130, 180); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 144, 163); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("CU_DCDR.sv", 165, 262); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 141, 160, true, false, false, false, false); // ce (w, ck) - Shift Key
+// HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 43 MB. Current time: 3/2/20 11:57:59 AM PST
+typeControlKey((HResource) null, "CU_DCDR.sv", 'c'); // ce (w, ck)
+// [Engine Memory]: 636 MB (+992kb) [00:01:33]
+selectCodeEditor("CU_DCDR.sv", 157, 297); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 154, 289); // ce (w, ck)
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 99, 212, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("CU_DCDR.sv", 11, 204); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 2, 209); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 180, 215); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 277, 213); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 277, 213, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 169, 217); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 169, 217, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("CU_DCDR.sv", 268, 253); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 269, 252); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 177, 217); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("CU_DCDR.sv", 286, 199); // ce (w, ck)
+// [GUI Memory]: 85 MB (+3421kb) [00:02:43]
+typeControlKey((HResource) null, "CU_DCDR.sv", 'c'); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 210, 296); // ce (w, ck)
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// Elapsed time: 28 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// [GUI Memory]: 90 MB (+325kb) [00:03:43]
+// Elapsed time: 25 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// Elapsed time: 22 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// Elapsed time: 23 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+// [GUI Memory]: 98 MB (+3816kb) [00:05:03]
+// Elapsed time: 22 seconds
+selectCodeEditor("CU_DCDR.sv", 135, 198); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 140, 293); // ce (w, ck)
+// Elapsed time: 51 seconds
+selectCodeEditor("CU_DCDR.sv", 239, 179); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 161, 201); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 220, 197); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 208, 282); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("CU_DCDR.sv", 195, 285); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 214, 236); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 194, 163); // ce (w, ck)
+// Elapsed time: 23 seconds
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 168, 229); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 319, 261); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 308, 55); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 298, 38); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 302, 64, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 302, 64, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 294, 63); // ce (w, ck)
+typeControlKey((HResource) null, "CU_DCDR.sv", 'v'); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 212, 175); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("CU_DCDR.sv", 315, 11, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 306, 16); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 335, 133); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 335, 155); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 246, 240); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 149, 243); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 149, 243, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 121, 227); // ce (w, ck)
+// [GUI Memory]: 105 MB (+2658kb) [00:08:02]
+// Elapsed time: 48 seconds
+selectCodeEditor("CU_DCDR.sv", 204, 77); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CU_DCDR.sv", 196, 227); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 204, 213); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 204, 281); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 205, 252); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 201, 198); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 198, 149); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("CU_DCDR.sv", 116, 96); // ce (w, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("CU_DCDR.sv", 265, 57); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 179, 57); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CU_DCDR.sv", 255, 64); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 205, 77); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 205, 76); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 205, 76, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 216, 81); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 216, 81, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 128, 76); // ce (w, ck)
+// Elapsed time: 17 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("CU_DCDR.sv", 200, 207); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 107, 303, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 97, 299); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 97, 299, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 248, 215); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 215, 164); // ce (w, ck)
+// Elapsed time: 47 seconds
+selectCodeEditor("CU_DCDR.sv", 210, 128); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 195, 130); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CU_DCDR.sv", 129, 112); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 227, 111); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 216, 109); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CU_DCDR.sv", 274, 46); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("CU_DCDR.sv", 298, 151); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 299, 151); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 285, 170); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 116, 95); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 116, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 15 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "op_rg3"); // l (aQ, ck)
+selectCodeEditor("CU_DCDR.sv", 132, 91); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("CU_DCDR.sv", 79, 113); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 136, 185); // ce (w, ck)
+// Elapsed time: 31 seconds
+selectCodeEditor("CU_DCDR.sv", 190, 217); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 190, 217, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 190, 217); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 220, 230); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("CU_DCDR.sv", 84, 201, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 84, 185); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 84, 158, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 84, 158, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 49, 151); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 85, 165); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 85, 136); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 87, 133); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 81, 192); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 85, 214); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 85, 230); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 81, 250); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 119, 268); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 163, 267); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 163, 267); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 163, 267); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 145, 184, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 113, 181); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 197, 179); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("CU_DCDR.sv", 194, 59); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 211, 92); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("CU_DCDR.sv", 344, 101); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 252, 129); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 252, 129); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("CU_DCDR.sv", 208, 192); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 185, 230); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("CU_DCDR.sv", 247, 266, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 225, 285); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 261, 281); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 151, 309); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 158, 216); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 220, 184, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 215, 181); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 247, 236); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 179, 149); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 174, 112, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 167, 113); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 167, 113, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 218, 180); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 296, 228); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 211, 240); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("CU_DCDR.sv", 211, 240); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 218, 240); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 183, 272); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 183, 265); // ce (w, ck)
+// Elapsed time: 36 seconds
+selectCodeEditor("CU_DCDR.sv", 249, 197); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("CU_DCDR.sv", 313, 224); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 192, 253); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 319, 213); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 223, 195); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 223, 195, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 232, 194); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 232, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CU_DCDR.sv", 307, 234); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 273, 238); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 271, 264); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 177, 299); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CU_DCDR.sv", 179, 247); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 206, 143); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 201, 241); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 198, 266, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 139, 150, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 100, 147, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 100, 147, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 50, 156); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 144, 143); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 324, 197); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 147, 146, true, false, false, true, false); // ce (w, ck) - Shift Key - Popup Trigger
+selectCodeEditor("CU_DCDR.sv", 140, 145); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 308, 193); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 147, 143, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("CU_DCDR.sv", 179, 219); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 184, 255); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 185, 249); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 201, 249); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 158, 262); // ce (w, ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("CU_DCDR.sv", 122, 184); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 168, 91); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 168, 91, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("CU_DCDR.sv", 148, 113); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("CU_DCDR.sv", 145, 165); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 120, 181); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 82, 228); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 85, 248); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 271, 244); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("CU_DCDR.sv", 88, 265); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 26, 282); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 60, 271); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 109, 295); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 34 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), branch_address_generator : BRANCH_ADDR_GEN (BRANCH_ADDR_GEN.v)]", 8, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), branch_address_generator : BRANCH_ADDR_GEN (BRANCH_ADDR_GEN.v)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v), branch_address_generator : BRANCH_ADDR_GEN (BRANCH_ADDR_GEN.v)]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 76 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "Verilog", 0); // cl (Q, F)
+// Elapsed time: 13 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "BRANCH_COND_GEN"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 20 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v}} 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BRANCH_COND_GEN (BRANCH_COND_GEN.v)]", 17, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BRANCH_COND_GEN (BRANCH_COND_GEN.v)]", 17, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BRANCH_COND_GEN (BRANCH_COND_GEN.v)]", 17, false); // B (D, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 103, 272); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 100, 260); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CU_DCDR.sv", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BRANCH_COND_GEN.v", 3); // k (j, ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 67, 264); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 157, 264); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 109, 285); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 82, 282); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 173, 287, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("BRANCH_COND_GEN.v", 142, 293); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 97, 281); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 87, 281); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 44, 310); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 122, 287); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 153, 214, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("BRANCH_COND_GEN.v", 139, 213); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 152, 213); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 139, 252); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 130, 243); // ce (w, ck)
+// Elapsed time: 39 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 121, 217); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 120, 213); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 224, 213); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 123, 211); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 217, 262); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 209, 238); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 174, 248); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 152, 263); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 100, 283); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 93, 296); // ce (w, ck)
+// Elapsed time: 44 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 97, 283); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("BRANCH_COND_GEN.v", 72, 196); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 72, 196, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("BRANCH_COND_GEN.v", 58, 188); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 70, 178); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 76, 114); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 246, 192); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 83, 165); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 83, 165, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("BRANCH_COND_GEN.v", 145, 259); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 375, 248); // ce (w, ck)
+selectCodeEditor("BRANCH_COND_GEN.v", 371, 259); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OTTER_Wrapper (OTTER_Wrapper_v1_04.sv), my_otter : OTTER_MCU (OTTER_MCU.v)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 25 seconds
+selectCodeEditor("OTTER_MCU.v", 155, 112); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 155, 112, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("OTTER_MCU.v", 502, 198); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("OTTER_MCU.v", 399, 249); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 134, 96); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 143, 114); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 143, 114, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("OTTER_MCU.v", 161, 112); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 159, 131); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 47 MB. Current time: 3/2/20 12:28:00 PM PST
+selectCodeEditor("OTTER_MCU.v", 255, 248); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("OTTER_MCU.v", 134, 281); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 134, 281, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("OTTER_MCU.v", 101, 299); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 101, 299, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectCodeEditor("OTTER_MCU.v", 75, 301); // ce (w, ck)
+selectCodeEditor("OTTER_MCU.v", 50, 77); // ce (w, ck)
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BRANCH_COND_GEN.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CU_DCDR.sv", 1); // k (j, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("CU_DCDR.sv", 305, 95); // ce (w, ck)
+// Elapsed time: 34 seconds
+selectCodeEditor("CU_DCDR.sv", 309, 232); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 308, 283); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 304, 250); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 305, 110); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 300, 55); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 372, 185); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 338, 114); // ce (w, ck)
+selectCodeEditor("CU_DCDR.sv", 336, 112); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OTTER_MCU.v", 4); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// Elapsed time: 48 seconds
+setFileChooser("C:/Users/Ryan Madden/Downloads/test_all.sv");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 55 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse {{C:/Users/Ryan Madden/Downloads/test_all.sv}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9, true); // B (D, ck) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 10); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, test_all.sv]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, test_all.sv]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 66 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, test_all.sv]", 11, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Ryan Madden/Downloads/test_all.sv}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset sim_1 {{C:/Users/Ryan Madden/Downloads/test_all.sv}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 52 MB. Current time: 3/2/20 12:33:45 PM PST
+// [Engine Memory]: 681 MB (+13597kb) [00:37:19]
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 6); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, otter_memory.mem]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, otter_memory.mem]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("otter_memory.mem", 107, 145); // ce (w, ck)
+selectCodeEditor("otter_memory.mem", 84, 141); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'OTTER_Wrapper' in fileset 'sim_1'... INFO: [SIM-utils-43] Exported 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim/otter_memory.mem' INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)... INFO: [USF-XSim-101] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj OTTER_Wrapper_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 954.754 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '6' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot OTTER_Wrapper_behav  ****** Webtalk v2018.2 (64-bit)   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source C:/Users/Ryan -notrace couldn't read file "C:/Users/Ryan": no such file or directory INFO: [Common 17-206] Exiting Webtalk at Mon Mar  2 12:34:34 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 954.754 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "OTTER_Wrapper_behav -key {Behavioral:sim_1:Functional:OTTER_Wrapper} -tclbatch {OTTER_Wrapper.tcl} -view {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sim_1/imports/project_1/pc_mem_sim_behav.wcfg}} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// Tcl Message: open_wave_config {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sim_1/imports/project_1/pc_mem_sim_behav.wcfg} 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 60 MB. Current time: 3/2/20 12:34:38 PM PST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source OTTER_Wrapper.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'OTTER_Wrapper_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 954.754 ; gain = 0.000 
+// 'd' command handler elapsed time: 15 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Run Simulation"); // e (ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 60 MB. Current time: 3/2/20 12:34:40 PM PST
+selectButton(RDIResource.WaveformView_GOTO_TIME_0, "Waveform Viewer_RunReset"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 70 MB. Current time: 3/2/20 12:34:45 PM PST
+expandTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "my_otter ; OTTER_MCU ; Verilog Module", 1); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "register ; RegFile ; Verilog Module", 5, "register", 0, false); // d (O, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 0, false); // a (s, ck)
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 11, false); // a (s, ck)
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false); // a (s, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 59 MB. Current time: 3/2/20 12:35:09 PM PST
+expandTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "pc ; ProgramCounter ; Verilog Module", 2); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "pc ; ProgramCounter ; Verilog Module", 2, "pc", 0, true); // d (O, ck) - Node
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "pc ; ProgramCounter ; Verilog Module", 2, "pc", 0, true, false, false, false, false, true); // d (O, ck) - Double Click - Node
+// TclEventType: SIMULATION_OPEN_SOURCE
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "pc ; ProgramCounter ; Verilog Module", 2, "pc", 0, true); // d (O, ck) - Node
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "pc ; ProgramCounter ; Verilog Module", 2, "pc", 0, true); // d (O, ck) - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+unMinimizeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // aw
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "pcSource[1:0] ; 0 ; Array", 2, "pcSource[1:0]", 0, true); // m (c, ck) - Node
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "address[31:0] ; XXXXXXXX ; Array", 7, "address[31:0]", 0, true); // m (c, ck) - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false); // a (s, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false); // a (s, ck)
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false); // a (s, ck)
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 10, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+selectMenuItem((HResource) null, "Delete"); // ad (aj, Popup.HeavyWeightWindow)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 56 MB. Current time: 3/2/20 12:35:47 PM PST
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 0, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 0, false); // a (s, ck)
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 0, false); // a (s, ck)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, .]", 0, false, false, false, false, true, false); // a (s, ck) - Popup Trigger
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectMenuItem((HResource) null, "Delete"); // ad (aj, Popup.HeavyWeightWindow)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_RELAUNCH, "simulation_relaunch"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RELAUNCH
+// b (ck):  Relaunch Simulation : addNotify
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: relaunch_sim 
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (b)

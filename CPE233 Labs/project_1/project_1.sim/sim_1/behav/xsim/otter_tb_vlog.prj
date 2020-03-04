@@ -18,7 +18,7 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/OTTER_MCU.v" \
 
 sv xil_defaultlib  \
-"../../../../project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv" \
+"../../../../../../../../../Downloads/OTTER_Wrapper_v1_01.sv" \
 
 verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/exp4_gen_units.v" \
@@ -37,6 +37,20 @@ verilog xil_defaultlib  \
 sv xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/officer_mem.sv" \
 "../../../../project_1.srcs/sources_1/new/otter_memory_v1_05.sv" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/BRANCH_COND_GEN.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../../Downloads/SevSegDisp.sv" \
+
+verilog xil_defaultlib  \
+"../../../../../../../../../Downloads/CLK_DIV_FS.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../../Downloads/debounce_one_shot.sv" \
+"../../../../../../../../../Downloads/BCD.sv" \
+"../../../../../../../../../Downloads/CathodeDriver.sv" \
 
 verilog xil_defaultlib  \
 "../../../../project_1.srcs/sim_1/new/fibsim.v" \

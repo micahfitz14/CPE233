@@ -1,0 +1,44 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 03/02/2020 12:21:13 PM
+// Design Name: 
+// Module Name: BRANCH_COND_GEN
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module BRANCH_COND_GEN(
+    input [31:0] rs1, rs2,
+    output reg br_eq, br_lt, br_ltu
+    );
+    
+    always @ (rs1, rs2)
+    begin
+        if (rs1 == rs2)
+            br_eq = 1;
+        else if ($signed(rs1) < $signed(rs2))
+            br_lt = 1;
+        else if (rs1 < rs2)
+            br_ltu = 1;
+        else
+        begin
+            br_eq = 0;
+            br_lt = 0;
+            br_ltu = 0;
+        end
+    end
+          
+endmodule

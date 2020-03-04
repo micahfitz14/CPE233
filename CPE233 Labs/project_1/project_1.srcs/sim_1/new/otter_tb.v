@@ -49,7 +49,7 @@ OTTER_MCU  my_otter(
    begin           
       RST=1;
       intr=0;
-      iobus_in = 32'h0000FEED;  
+      iobus_in = 32'h0000FEE0;  
     //  iobus_addr = 32'h11008000;
     
       #40   //iobus_in = 32'hFFFFFFFF;
