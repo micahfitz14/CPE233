@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="156330000fs"></ZoomStartTime>
-      <ZoomEndTime time="225530001fs"></ZoomEndTime>
-      <Cursor1Time time="199110000fs"></Cursor1Time>
+      <ZoomStartTime time="95930000fs"></ZoomStartTime>
+      <ZoomEndTime time="336387558fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="93"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="134"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/otter_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -52,12 +52,44 @@
       <obj_property name="ElementShortName">pcSource[1:0]</obj_property>
       <obj_property name="ObjectShortName">pcSource[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/otter_tb/my_otter/cu_fsm/regWrite" type="logic">
-      <obj_property name="ElementShortName">regWrite</obj_property>
-      <obj_property name="ObjectShortName">regWrite</obj_property>
-   </wvobject>
    <wvobject fp_name="/otter_tb/my_otter/pc/datain" type="array">
       <obj_property name="ElementShortName">datain[31:0]</obj_property>
       <obj_property name="ObjectShortName">datain[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/cu_dcdr/FUNC3" type="array">
+      <obj_property name="ElementShortName">FUNC3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FUNC3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/arithmitic_logic_unit/alu_fun" type="array">
+      <obj_property name="ElementShortName">alu_fun[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_fun[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/arithmitic_logic_unit/RESULT" type="array">
+      <obj_property name="ElementShortName">RESULT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESULT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/alu_src2_mux/SEL" type="array">
+      <obj_property name="ElementShortName">SEL[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/arithmitic_logic_unit/OP_1" type="array">
+      <obj_property name="ElementShortName">OP_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OP_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/alu_src1_mux/SEL" type="logic">
+      <obj_property name="ElementShortName">SEL</obj_property>
+      <obj_property name="ObjectShortName">SEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/arithmitic_logic_unit/OP_2" type="array">
+      <obj_property name="ElementShortName">OP_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OP_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/register/wd" type="array">
+      <obj_property name="ElementShortName">wd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/otter_tb/my_otter/cu_fsm/regWrite" type="logic">
+      <obj_property name="ElementShortName">regWrite</obj_property>
+      <obj_property name="ObjectShortName">regWrite</obj_property>
    </wvobject>
 </wave_config>

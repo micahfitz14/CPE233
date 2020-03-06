@@ -93,53 +93,65 @@ module CU_FSM(
             begin
                 pcWrite = 1'b1;
 				case (OPCODE)
+				    LUI: 
+                    begin
+                        regWrite = 1'b1;    
+                        NS = st_FET;
+                    end
+                      
+                    AUIPC:
+                    begin 
+                        regWrite = 1'b1;
+                        NS = st_FET;
+                    end 
+                    
+                    JAL: 
+                    begin
+                       regWrite = 1'b1; 
+                       NS = st_FET;
+                    end
+                    
+                    JALR:
+                    begin
+                       regWrite = 1'b1;
+                       NS = st_FET;
+                    end
+                    
+                    BRANCH: 
+                    begin
+                       NS = st_FET;
+                    end   
+                                 
 				    LOAD: 
-                       begin
-                          regWrite = 1'b0;
-                          memRDEN2 = 1'b1;
-                          NS = st_WB;
-                       end
+                    begin
+                        regWrite = 1'b0;
+                        memRDEN2 = 1'b1;
+                        NS = st_WB;
+                    end
                     
 					STORE: 
-                       begin
-                          regWrite = 1'b0;
-                          memWE2 = 1'b1;
-                          NS = st_FET;
-                       end
-                    
-					BRANCH: 
-                       begin
-                          NS = st_FET;
-                       end
-					
-					LUI: 
-					   begin
-                          regWrite = 1'b1;	
-					      NS = st_FET;
-					   end
-					  
-					OP_IMM:  // addi 
-					   begin 
-					      regWrite = 1'b1;	
-					      NS = st_FET;
-					   end
-					
-	                JAL: 
-					   begin
-					      regWrite = 1'b1; 
-					      NS = st_FET;
-					   end
-					   
+                    begin
+                       regWrite = 1'b0;
+                       memWE2 = 1'b1;
+                       NS = st_FET;
+                    end
+                      
+					OP_IMM: 
+			        begin 
+					   regWrite = 1'b1;	
+					   NS = st_FET;
+					end
+   
 					OP_RG3:
-					   begin
-					       regWrite = 1'b1;
-					       NS = st_FET;
-					   end
+				    begin
+                       regWrite = 1'b1;
+                       NS = st_FET;
+					end
 					   
                     default:  
-					   begin 
-					      NS = st_FET;
-					   end
+                    begin 
+                       NS = st_FET;
+                    end
 					
                 endcase
             end
@@ -147,7 +159,7 @@ module CU_FSM(
             st_WB:
             begin
                regWrite = 1'b1; 
-               memRDEN2 = 1'b1;
+               memRDEN2 = 1'b0;
                NS = st_FET;
             end
  
