@@ -61,13 +61,98 @@ proc step_failed { step } {
 }
 
 
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/ip}} [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp}}
+  read_xdc {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc}}
+  link_design -top OTTER_Wrapper -part xc7a35tcpg236-1
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force OTTER_Wrapper_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file OTTER_Wrapper_drc_opted.rpt -pb OTTER_Wrapper_drc_opted.pb -rpx OTTER_Wrapper_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force OTTER_Wrapper_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file OTTER_Wrapper_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file OTTER_Wrapper_utilization_placed.rpt -pb OTTER_Wrapper_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force OTTER_Wrapper_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file OTTER_Wrapper_drc_routed.rpt -pb OTTER_Wrapper_drc_routed.pb -rpx OTTER_Wrapper_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file OTTER_Wrapper_methodology_drc_routed.rpt -pb OTTER_Wrapper_methodology_drc_routed.pb -rpx OTTER_Wrapper_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file OTTER_Wrapper_route_status.rpt -pb OTTER_Wrapper_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file OTTER_Wrapper_timing_summary_routed.rpt -pb OTTER_Wrapper_timing_summary_routed.pb -rpx OTTER_Wrapper_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file OTTER_Wrapper_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file OTTER_Wrapper_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file OTTER_Wrapper_bus_skew_routed.rpt -pb OTTER_Wrapper_bus_skew_routed.pb -rpx OTTER_Wrapper_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force OTTER_Wrapper_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
-  open_checkpoint OTTER_Wrapper_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/wt} [current_project]
   catch { write_mem_info -force OTTER_Wrapper.mmi }
   write_bitstream -force OTTER_Wrapper.bit 
   catch {write_debug_probes -quiet -force OTTER_Wrapper}

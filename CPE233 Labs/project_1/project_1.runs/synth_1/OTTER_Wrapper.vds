@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Mar  4 12:38:48 2020
-# Process ID: 6208
-# Current directory: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1
+# Start of session at: Fri Mar  6 12:14:43 2020
+# Process ID: 32528
+# Current directory: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1\vivado.jou
+# Log file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
 Command: synth_design -top OTTER_Wrapper -part xc7a35tcpg236-1
@@ -15,74 +15,59 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1124 
+INFO: Helper process launched with PID 32672 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.719 ; gain = 100.004
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.242 ; gain = 99.773
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:13]
-	Parameter SWITCHES_AD bound to: 285212672 - type: integer 
-	Parameter LEDS_AD bound to: 285736960 - type: integer 
-	Parameter SSEG_AD bound to: 285999104 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_MCU.v:16]
-INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v:12]
-INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:39]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:25]
+	Parameter SWITCHES_PORT_ADDR bound to: 285245440 - type: integer 
+	Parameter BUTTONS_PORT_ADDR bound to: 285245444 - type: integer 
+	Parameter LEDS_PORT_ADDR bound to: 285261824 - type: integer 
+	Parameter SEGS_PORT_ADDR bound to: 285261828 - type: integer 
+	Parameter ANODES_PORT_ADDR bound to: 285261832 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_MCU.v:16]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v:12]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:39]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (1#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:39]
-INFO: [Synth 8-6157] synthesizing module 'rca_nb' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (1#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:39]
+INFO: [Synth 8-6157] synthesizing module 'rca_nb' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:35]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'rca_nb' (2#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:35]
-INFO: [Synth 8-6157] synthesizing module 'cntr_up_clr_nb' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'rca_nb' (2#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:35]
+INFO: [Synth 8-6157] synthesizing module 'cntr_up_clr_nb' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:33]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'cntr_up_clr_nb' (3#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (4#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v:12]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:46]
-INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed | block}" *) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:68]
-INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:71]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:93]
+INFO: [Synth 8-6155] done synthesizing module 'cntr_up_clr_nb' (3#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (4#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "{distributed | block}" *) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:68]
+INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:71]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:93]
 INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM memory_reg 
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (5#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:46]
-INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/reg_file_v_1_00.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'RegFile' (6#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/reg_file_v_1_00.v:22]
-INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/IMMED_GEN.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (7#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/IMMED_GEN.v:17]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (8#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v:9]
-INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (5#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/otter_memory_v1_05.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/reg_file_v_1_00.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (6#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/reg_file_v_1_00.v:22]
+INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/IMMED_GEN.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (7#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/IMMED_GEN.v:17]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_ADDR_GEN' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_ADDR_GEN' (8#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:33]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (9#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:33]
-INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (10#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v:13]
-INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_FSM.sv:32]
-INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (11#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_FSM.sv:32]
-INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:31]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:192]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:282]
-INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (12#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:31]
-INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (13#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (9#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:33]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (10#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v:13]
+INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_FSM.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (11#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_FSM.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:31]
+INFO: [Synth 8-226] default block is never used [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:192]
+INFO: [Synth 8-226] default block is never used [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:282]
+INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (12#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CU_DCDR.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_COND_GEN' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_COND_GEN' (13#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:23]
 INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM memory_reg 
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (14#1) [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_MCU.v:16]
-WARNING: [Synth 8-689] width (1) of port connection 'intr' does not match port width (2) of module 'OTTER_MCU' [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:61]
-WARNING: [Synth 8-350] instance 'my_otter' of module 'OTTER_MCU' requires 8 connections, but only 7 given [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/Ryan Madden/Downloads/SevSegDisp.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/Ryan Madden/Downloads/BCD.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'BCD' (15#1) [C:/Users/Ryan Madden/Downloads/BCD.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:22]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:46]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:49]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:71]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:93]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:115]
-INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (16#1) [C:/Users/Ryan Madden/Downloads/CathodeDriver.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (17#1) [C:/Users/Ryan Madden/Downloads/SevSegDisp.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'debounce_one_shot' [C:/Users/Ryan Madden/Downloads/debounce_one_shot.sv:24]
-INFO: [Synth 8-6155] done synthesizing module 'debounce_one_shot' (18#1) [C:/Users/Ryan Madden/Downloads/debounce_one_shot.sv:24]
-INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Users/Ryan Madden/Downloads/CLK_DIV_FS.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div' (19#1) [C:/Users/Ryan Madden/Downloads/CLK_DIV_FS.v:5]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (14#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_MCU.v:16]
+WARNING: [Synth 8-350] instance 'my_otter' of module 'OTTER_MCU' requires 8 connections, but only 7 given [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
 INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM memory_reg 
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (20#1) [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (15#1) [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:25]
 WARNING: [Synth 8-3331] design CU_FSM has unconnected port intr
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[6]
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[5]
@@ -94,7 +79,7 @@ WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[0]
 WARNING: [Synth 8-3331] design OTTER_MCU has unconnected port intr[1]
 WARNING: [Synth 8-3331] design OTTER_MCU has unconnected port intr[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.430 ; gain = 166.715
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 422.770 ; gain = 166.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -103,80 +88,80 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[31] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[30] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[29] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[28] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[27] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[26] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[25] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[24] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[23] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[22] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[21] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[20] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[19] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[18] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[17] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[16] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[15] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[14] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[13] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[12] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[11] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[10] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[9] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[8] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[7] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[6] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[5] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[4] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[3] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[2] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[1] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
-WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[0] to constant 0 [C:/Users/Ryan Madden/Downloads/OTTER_Wrapper_v1_01.sv:59]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[31] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[30] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[29] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[28] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[27] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[26] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[25] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[24] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[23] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[22] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[21] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[20] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[19] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[18] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[17] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[16] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[15] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[14] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[13] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[12] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[11] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[10] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[9] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[8] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[7] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[6] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[5] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[4] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[3] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[2] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[1] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
+WARNING: [Synth 8-3295] tying undriven pin my_otter:CSR_reg[0] to constant 0 [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_04.sv:61]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.430 ; gain = 166.715
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 422.770 ; gain = 166.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.430 ; gain = 166.715
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 422.770 ; gain = 166.301
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/OTTER_Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 749.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 746.168 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 749.426 ; gain = 492.711
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 746.168 ; gain = 489.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 749.426 ; gain = 492.711
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 746.168 ; gain = 489.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 749.426 ; gain = 492.711
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 746.168 ; gain = 489.699
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'CU_FSM'
-INFO: [Synth 8-5546] ROM "regWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "regWrite" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "memWE2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "memRDEN2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "memRDEN1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -187,22 +172,9 @@ INFO: [Synth 8-5546] ROM "alu_fun" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "alu_srcA" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "alu_srcB" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "rf_wr_sel" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'debounce_one_shot'
-INFO: [Synth 8-5546] ROM "DB_BTN" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "s_count_rst" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "s_count_rst" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "s_count_rst" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "s_count_inc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "s_count_inc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "sclk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "LEDS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "r_SSEG" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "r_leds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "r_segs" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "r_an" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -211,22 +183,11 @@ INFO: [Synth 8-5545] ROM "r_SSEG" won't be mapped to RAM because address size (3
                    st_WB |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'CU_FSM'
-WARNING: [Synth 8-327] inferring latch for variable 'br_eq_reg' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:31]
-WARNING: [Synth 8-327] inferring latch for variable 'br_lt_reg' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:33]
-WARNING: [Synth 8-327] inferring latch for variable 'br_ltu_reg' [C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:35]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 ST_init |                              000 | 00000000000000000000000000000000
-              ST_BTN_low |                              001 | 00000000000000000000000000000001
-      ST_BTN_low_to_high |                              010 | 00000000000000000000000000000010
-             ST_BTN_high |                              011 | 00000000000000000000000000000011
-      ST_BTN_high_to_low |                              100 | 00000000000000000000000000000100
-             ST_one_shot |                              101 | 00000000000000000000000000000101
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'debounce_one_shot'
+WARNING: [Synth 8-327] inferring latch for variable 'br_eq_reg' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'br_lt_reg' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'br_ltu_reg' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v:35]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 749.426 ; gain = 492.711
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 746.168 ; gain = 489.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -240,22 +201,16 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 4     
 	   3 Input     32 Bit       Adders := 1     
-	   2 Input     20 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 34    
-	   2 Input      3 Bit       Adders := 7     
-	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
-	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---RAMs : 
 	             512K Bit         RAMs := 1     
 	             1024 Bit         RAMs := 1     
@@ -264,28 +219,23 @@ Detailed RTL Component Info :
 	   9 Input     32 Bit        Muxes := 2     
 	  16 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   3 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
-	  19 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 31    
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 11    
-	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	  10 Input      2 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 6     
 	   9 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 3     
-	   3 Input      1 Bit        Muxes := 7     
-	  10 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -296,10 +246,17 @@ Hierarchical RTL Component report
 Module OTTER_Wrapper 
 Detailed RTL Component Info : 
 +---Registers : 
-	               16 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
 Module mux_4t1_nb 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -346,8 +303,8 @@ Module CU_FSM
 Detailed RTL Component Info : 
 +---Muxes : 
 	   3 Input      3 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 3     
+	  10 Input      3 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 3     
 Module CU_DCDR 
 Detailed RTL Component Info : 
@@ -363,54 +320,6 @@ Detailed RTL Component Info :
 Module BRANCH_COND_GEN 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module BCD 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 34    
-	   2 Input      3 Bit       Adders := 7     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 30    
-	   2 Input      3 Bit        Muxes := 4     
-Module CathodeDriver 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     20 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	  19 Input      8 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-Module SevSegDisp 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-Module debounce_one_shot 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 5     
-	   3 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 3     
-Module clk_div 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -430,19 +339,11 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "cu_fsm/memRDEN2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cu_fsm/memWE2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "cu_fsm/regWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "cu_fsm/regWrite" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "cu_dcdr/alu_fun" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cu_dcdr/alu_srcA" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "cu_dcdr/alu_srcB" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "cu_dcdr/rf_wr_sel" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "DB/s_count_inc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "DB/s_count_inc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "DB/DB_BTN" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "DB/s_count_rst" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "clkDIv/div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clkDIv/sclk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "LEDS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "r_SSEG" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design OTTER_MCU has unconnected port intr[1]
 WARNING: [Synth 8-3331] design OTTER_MCU has unconnected port intr[0]
 INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[16]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
@@ -462,10 +363,8 @@ INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[29]' (
 INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[30]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_otter/otter_memory/\ioBuffer_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (ioBuffer_reg[31]) is unused and will be removed from module Memory.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SSG_DISP/CathMod/CATHODES_reg[7] )
-WARNING: [Synth 8-3332] Sequential element (SSG_DISP/CathMod/CATHODES_reg[7]) is unused and will be removed from module OTTER_Wrapper.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 749.426 ; gain = 492.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 746.168 ; gain = 489.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -533,13 +432,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 753.531 ; gain = 496.816
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 751.059 ; gain = 494.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 774.586 ; gain = 517.871
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 753.836 ; gain = 497.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -605,7 +504,7 @@ INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_re
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -629,7 +528,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -642,7 +541,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -654,25 +553,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -689,14 +588,14 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |CARRY4     |    93|
-|3     |LUT1       |     6|
-|4     |LUT2       |   261|
-|5     |LUT3       |   157|
-|6     |LUT4       |   307|
-|7     |LUT5       |   305|
-|8     |LUT6       |   743|
-|9     |MUXF7      |   119|
+|2     |CARRY4     |    75|
+|3     |LUT1       |    15|
+|4     |LUT2       |   257|
+|5     |LUT3       |   188|
+|6     |LUT4       |   278|
+|7     |LUT5       |   283|
+|8     |LUT6       |   753|
+|9     |MUXF7      |    79|
 |10    |MUXF8      |    37|
 |11    |RAM32M     |    12|
 |12    |RAMB36E1   |     1|
@@ -705,43 +604,38 @@ Report Cell Usage:
 |15    |RAMB36E1_3 |     1|
 |16    |RAMB36E1_4 |    12|
 |17    |FDCE       |    32|
-|18    |FDRE       |   166|
-|19    |FDSE       |     4|
-|20    |LD         |     2|
-|21    |LDP        |     1|
-|22    |IBUF       |    19|
-|23    |OBUF       |    28|
+|18    |FDRE       |    89|
+|19    |LD         |     2|
+|20    |LDP        |     1|
+|21    |IBUF       |    22|
+|22    |OBUF       |    28|
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+------------------+------------------+------+
-|      |Instance          |Module            |Cells |
-+------+------------------+------------------+------+
-|1     |top               |                  |  2310|
-|2     |  DB              |debounce_one_shot |    35|
-|3     |  SSG_DISP        |SevSegDisp        |    88|
-|4     |    CathMod       |CathodeDriver     |    88|
-|5     |  clkDIv          |clk_div           |    52|
-|6     |  my_otter        |OTTER_MCU         |  2021|
-|7     |    alu_src1_mux  |mux_2t1_nb        |    94|
-|8     |    alu_src2_mux  |mux_4t1_nb        |    55|
-|9     |    condgen       |BRANCH_COND_GEN   |     4|
-|10    |    cu_fsm        |CU_FSM            |     4|
-|11    |    otter_memory  |Memory            |  1603|
-|12    |    pc            |ProgramCounter    |    57|
-|13    |      MY_CNTR     |cntr_up_clr_nb    |    49|
-|14    |      MY_RCA      |rca_nb            |     8|
-|15    |    reg_input_mux |mux_4t1_nb_0      |    96|
-|16    |    register      |RegFile           |   108|
-+------+------------------+------------------+------+
++------+------------------+----------------+------+
+|      |Instance          |Module          |Cells |
++------+------------------+----------------+------+
+|1     |top               |                |  2169|
+|2     |  my_otter        |OTTER_MCU       |  2054|
+|3     |    alu_src1_mux  |mux_2t1_nb      |    92|
+|4     |    alu_src2_mux  |mux_4t1_nb      |    74|
+|5     |    condgen       |BRANCH_COND_GEN |     4|
+|6     |    cu_fsm        |CU_FSM          |     5|
+|7     |    otter_memory  |Memory          |  1650|
+|8     |    pc            |ProgramCounter  |    57|
+|9     |      MY_CNTR     |cntr_up_clr_nb  |    49|
+|10    |      MY_RCA      |rca_nb          |     8|
+|11    |    reg_input_mux |mux_4t1_nb_0    |    64|
+|12    |    register      |RegFile         |   108|
++------+------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 830.602 ; gain = 574.133
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 827.066 ; gain = 244.355
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 827.066 ; gain = 570.352
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 830.602 ; gain = 250.734
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 830.602 ; gain = 574.133
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 299 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 244 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -752,11 +646,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-193 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+154 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 827.066 ; gain = 583.363
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 830.602 ; gain = 587.148
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 827.066 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  4 12:39:27 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 830.602 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 12:15:37 2020...
