@@ -2,24 +2,24 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Mar  6 12:15:46 2020
-# Process ID: 33408
-# Current directory: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1
+# Start of session at: Fri Mar  6 12:54:43 2020
+# Process ID: 9244
+# Current directory: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1
 # Command line: vivado.exe -log OTTER_Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OTTER_Wrapper.tcl -notrace
-# Log file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper.vdi
-# Journal file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1\vivado.jou
+# Log file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper.vdi
+# Journal file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
 Command: link_design -top OTTER_Wrapper -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 241 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 296 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
+Parsing XDC File [C:/Users/Ryan Madden/Downloads/Basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Ryan Madden/Downloads/Basys3_constraints.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
@@ -27,7 +27,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 571.547 ; gain = 321.961
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 573.848 ; gain = 324.992
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -38,66 +38,66 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 582.500 ; gain = 10.953
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.802 . Memory (MB): peak = 583.594 ; gain = 9.746
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: b090dd8d
+Ending Cache Timing Information Task | Checksum: eff1ed55
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1125.699 ; gain = 543.199
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1128.230 ; gain = 544.637
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1ea521ccb
+Phase 1 Retarget | Checksum: eff1ed55
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.440 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1128.230 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1a9350711
+Phase 2 Constant propagation | Checksum: 9f84096a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.522 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.209 . Memory (MB): peak = 1128.230 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 15946f92d
+Phase 3 Sweep | Checksum: 1a3d629bf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.608 . Memory (MB): peak = 1125.699 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.278 . Memory (MB): peak = 1128.230 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 36 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 15946f92d
+Phase 4 BUFG optimization | Checksum: 1a3d629bf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.714 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 1128.230 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 12b40c841
+Phase 5 Shift Register Optimization | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.806 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.442 . Memory (MB): peak = 1128.230 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 12b40c841
+Phase 6 Post Processing Netlist | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.824 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.455 . Memory (MB): peak = 1128.230 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1125.699 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 12b40c841
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1128.230 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.848 . Memory (MB): peak = 1125.699 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.470 . Memory (MB): peak = 1128.230 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=8.776 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=3.912 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -109,35 +109,35 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 16 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 32
-Ending PowerOpt Patch Enables Task | Checksum: 12b40c841
+Ending PowerOpt Patch Enables Task | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 12b40c841
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Ending Power Optimization Task | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1302.387 ; gain = 176.688
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1305.535 ; gain = 177.305
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 12b40c841
+Ending Final Cleanup Task | Checksum: d72d03ee
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 29 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 1302.387 ; gain = 730.840
+opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1305.535 ; gain = 731.688
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file OTTER_Wrapper_drc_opted.rpt -pb OTTER_Wrapper_drc_opted.pb -rpx OTTER_Wrapper_drc_opted.rpx
 Command: report_drc -file OTTER_Wrapper_drc_opted.rpt -pb OTTER_Wrapper_drc_opted.pb -rpx OTTER_Wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/micah/Vivado/2018.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_drc_opted.rpt.
 report_drc completed successfully
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -148,26 +148,26 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
@@ -177,43 +177,43 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e4cd7c29
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c055bcfe
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1008e19ba
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 778423b5
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1780500ec
+Phase 1.3 Build Placer Netlist Model | Checksum: 16130a9a8
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1780500ec
+Phase 1.4 Constrain Clocks/Macros | Checksum: 16130a9a8
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1780500ec
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 16130a9a8
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 18cf0d8b9
+Phase 2.1 Floorplanning | Checksum: 10a991ead
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -227,52 +227,52 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 1476a12ee
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1115a8ff1
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 2 Global Placement | Checksum: e1a860cc
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 201120857
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: e1a860cc
+Phase 3.1 Commit Multi Column Macros | Checksum: 201120857
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e7cf45d2
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 193b9aa0c
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1aa402741
+Phase 3.3 Area Swap Optimization | Checksum: 138d7a957
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1aa402741
+Phase 3.4 Pipeline Register Optimization | Checksum: 138d7a957
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 11585bdfa
+Phase 3.5 Small Shape Detail Placement | Checksum: 1a4979b36
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 1054d620e
+Phase 3.6 Re-assign LUT pins | Checksum: 194c796c7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 1054d620e
+Phase 3.7 Pipeline Register Optimization | Checksum: 194c796c7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1054d620e
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 194c796c7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -280,58 +280,58 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: e7837331
+Post Placement Optimization Initialization | Checksum: 110932427
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: e7837331
+Phase 4.1.1.1 BUFG Insertion | Checksum: 110932427
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=8.882. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 16954fcc5
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.773. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 11b65fa5b
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 16954fcc5
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 11b65fa5b
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 16954fcc5
+Phase 4.2 Post Placement Cleanup | Checksum: 11b65fa5b
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 16954fcc5
+Phase 4.3 Placer Reporting | Checksum: 11b65fa5b
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 203c34a0a
+Phase 4.4 Final Placement Cleanup | Checksum: 164ed78aa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 203c34a0a
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 164ed78aa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Ending Placer Task | Checksum: 11912480a
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Ending Placer Task | Checksum: 107c3194c
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 53 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1302.387 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.393 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.242 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file OTTER_Wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1302.387 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_placed.rpt -pb OTTER_Wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1302.387 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1302.387 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1305.535 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -343,98 +343,105 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 34918a77 ConstDB: 0 ShapeSum: e480bd93 RouteDB: 0
+Checksum: PlaceDB: 9a0bb602 ConstDB: 0 ShapeSum: 6db7634a RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 8124e152
+Phase 1 Build RT Design | Checksum: cbf04abf
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 420ab0f1 NumContArr: 3f1a3061 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 37751386 NumContArr: 947b3739 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 8124e152
+Phase 2.1 Create Timer | Checksum: cbf04abf
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 8124e152
+Phase 2.2 Fix Topology Constraints | Checksum: cbf04abf
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 8124e152
+Phase 2.3 Pre Route Cleanup | Checksum: cbf04abf
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.535 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 16597f0bc
+Phase 2.4 Update Timing | Checksum: 12b23aafa
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.797  | TNS=0.000  | WHS=0.008  | THS=0.000  |
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.760  | TNS=0.000  | WHS=-0.066 | THS=-0.376 |
 
-Phase 2 Router Initialization | Checksum: 20792d330
+Phase 2 Router Initialization | Checksum: 15aa35c74
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: e4f3f1cd
+Phase 3 Initial Routing | Checksum: 1bddb0f0e
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 273
+ Number of Nodes with overlaps = 249
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.540  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.766  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: dfdeaf8f
+Phase 4.1 Global Iteration 0 | Checksum: 104ce33f6
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: dfdeaf8f
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 104ce33f6
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: dfdeaf8f
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 105ca2cb2
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.859  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 105ca2cb2
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: dfdeaf8f
+Phase 5.2 Clock Skew Optimization | Checksum: 105ca2cb2
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: dfdeaf8f
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 105ca2cb2
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: c54d516c
+Phase 6.1.1 Update Timing | Checksum: e622b5f6
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=8.634  | TNS=0.000  | WHS=0.362  | THS=0.000  |
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.859  | TNS=0.000  | WHS=0.102  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: c54d516c
+Phase 6.1 Hold Fix Iter | Checksum: 7bbb06e2
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: c54d516c
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 7bbb06e2
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.19198 %
-  Global Horizontal Routing Utilization  = 1.88951 %
+  Global Vertical Routing Utilization    = 1.1569 %
+  Global Horizontal Routing Utilization  = 1.86231 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -443,56 +450,56 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: c54d516c
+Phase 7 Route finalize | Checksum: dd286248
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: c54d516c
+Phase 8 Verifying routed nets | Checksum: dd286248
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: b55176f0
+Phase 9 Depositing Routes | Checksum: 10e45c8fe
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=8.634  | TNS=0.000  | WHS=0.362  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.859  | TNS=0.000  | WHS=0.102  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: b55176f0
+Phase 10 Post Router Timing | Checksum: 10e45c8fe
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1302.387 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.535 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-70 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+71 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1302.387 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1305.535 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.344 . Memory (MB): peak = 1302.387 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.295 . Memory (MB): peak = 1305.535 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file OTTER_Wrapper_drc_routed.rpt -pb OTTER_Wrapper_drc_routed.pb -rpx OTTER_Wrapper_drc_routed.rpx
 Command: report_drc -file OTTER_Wrapper_drc_routed.rpt -pb OTTER_Wrapper_drc_routed.pb -rpx OTTER_Wrapper_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file OTTER_Wrapper_methodology_drc_routed.rpt -pb OTTER_Wrapper_methodology_drc_routed.pb -rpx OTTER_Wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file OTTER_Wrapper_methodology_drc_routed.rpt -pb OTTER_Wrapper_methodology_drc_routed.pb -rpx OTTER_Wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx
 Command: report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx
@@ -500,7 +507,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-82 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+83 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file OTTER_Wrapper_route_status.rpt -pb OTTER_Wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file OTTER_Wrapper_timing_summary_routed.rpt -pb OTTER_Wrapper_timing_summary_routed.pb -rpx OTTER_Wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -530,26 +537,26 @@ WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 
 WARNING: [DRC PDRC-153] Gated clock check: Net my_otter/register/count_reg[3] is a gated clock net sourced by a combinational pin my_otter/register/br_lt_reg_i_2/O, cell my_otter/register/br_lt_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net my_otter/register/count_reg[3]_0 is a gated clock net sourced by a combinational pin my_otter/register/br_eq_reg_i_1/O, cell my_otter/register/br_eq_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net my_otter/register/count_reg[3]_1 is a gated clock net sourced by a combinational pin my_otter/register/br_ltu_reg_i_2/O, cell my_otter/register/br_ltu_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/memory_reg_bram_12_0[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[14] (net: my_otter/otter_memory/ioBuffer_reg[15]_0[11]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 25 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -563,7 +570,7 @@ Writing bitstream ./OTTER_Wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-100 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1724.711 ; gain = 398.797
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 12:17:28 2020...
+write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1732.488 ; gain = 410.547
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 12:56:04 2020...

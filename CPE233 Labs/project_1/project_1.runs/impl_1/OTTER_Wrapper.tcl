@@ -68,12 +68,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp}}
-  read_xdc {{C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/constrs_1/new/constraints.xdc}}
+  add_files -quiet {{C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp}}
+  read_xdc {{C:/Users/Ryan Madden/Downloads/Basys3_constraints.xdc}}
   link_design -top OTTER_Wrapper -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
