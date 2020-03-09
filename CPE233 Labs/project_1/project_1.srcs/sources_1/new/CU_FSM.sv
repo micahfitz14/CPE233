@@ -42,17 +42,16 @@ module CU_FSM(
     output logic memRDEN2,
     output logic rst,
     output logic csr_WE,
-    output logic int_taken
-  );
-    
+    output logic int_taken  );
+
     typedef  enum logic [2:0] {
-       st_FET,
-       st_EX,
-       st_WB,
-       st_INTR
-    }  state_type; 
+        st_FET,
+        st_EX,
+        st_WB,
+        st_INTR
+        }  state_type; 
     state_type  NS,PS; 
-      
+    
     //- datatypes for RISC-V opcode types
     typedef enum logic [6:0] {
         LUI    = 7'b0110111,
@@ -65,46 +64,42 @@ module CU_FSM(
         OP_IMM = 7'b0010011,
         OP_RG3 = 7'b0110011, 
         SYS    = 7'b1110011
-    } opcode_t;
-	opcode_t OPCODE;    //- symbolic names for instruction opcodes
-     
-	assign OPCODE = opcode_t'(opcode); //- Cast input as enum 
-	assign rst = RST; 
-	//- state register (PS)
-	always @ (posedge clk)  
-        if (RST == 1)
-        begin
-            PS <= st_FET;
-        end 
-        else
-        begin 
-            PS <= NS;
-        end
+        } opcode_t;
+    opcode_t OPCODE;    //- symbolic names for instruction opcodes
     
+    assign OPCODE = opcode_t'(opcode); //- Cast input as enum 
+    assign rst = RST; 
+    //- state register (PS)
+    always @ (posedge clk)  
+        if (RST == 1)
+        PS <= st_FET; 
+        else 
+        PS <= NS;
+        
     always_comb
-    begin              
-        //- schedule all output to avoid latch
-        pcWrite = 1'b0;    regWrite = 1'b0;      
-		memWE2 = 1'b0;     memRDEN1 = 1'b0;    memRDEN2 = 1'b0;
-		csr_WE = 1'b0;     int_taken = 1'b0;
-                   
+        begin              
+            //- schedule all output to avoid latch
+            pcWrite = 1'b0;    regWrite = 1'b0;      
+            memWE2 = 1'b0;     memRDEN1 = 1'b0;    memRDEN2 = 1'b0;
+            csr_WE = 1'b0;     int_taken = 1'b0;
+        
         case (PS)
             st_FET: //waiting state  
             begin
                 memRDEN1 = 1'b1;                    
                 NS = st_EX; 
             end
-              
+            
             st_EX: //decode + execute
             begin
                 pcWrite = 1'b1;
-				case (OPCODE)
-				    LUI: 
+                case (OPCODE)
+                    LUI: 
                     begin
                         regWrite = 1'b1;    
                         NS = st_FET;
                     end
-                      
+                    
                     AUIPC:
                     begin 
                         regWrite = 1'b1;
@@ -113,71 +108,70 @@ module CU_FSM(
                     
                     JAL: 
                     begin
-                       regWrite = 1'b1; 
-                       NS = st_FET;
+                        regWrite = 1'b1; 
+                        NS = st_FET;
                     end
                     
                     JALR:
                     begin
-                       regWrite = 1'b1;
-                       NS = st_FET;
+                        regWrite = 1'b1;
+                        NS = st_FET;
                     end
                     
                     BRANCH: 
                     begin
-                       NS = st_FET;
+                        NS = st_FET;
                     end   
-                                 
-				    LOAD: 
+                         
+                    LOAD: 
                     begin
                         regWrite = 1'b0;
                         memRDEN2 = 1'b1;
                         NS = st_WB;
                     end
                     
-					STORE: 
+                    STORE: 
                     begin
-                       regWrite = 1'b0;
-                       memWE2 = 1'b1;
-                       NS = st_FET;
+                        regWrite = 1'b0;
+                        memWE2 = 1'b1;
+                        NS = st_FET;
                     end
-                      
-					OP_IMM: 
-			        begin 
-					   regWrite = 1'b1;	
-					   NS = st_FET;
-					end
-   
-					OP_RG3:
-				    begin
-                       regWrite = 1'b1;
-                       NS = st_FET;
-					end
-					///////////////////////////////////////////////////////////////
-					SYS:
-					begin
-					   csr_WE = 1'b1;//????????????????????????
-					end
-					   
+                    
+                    OP_IMM: 
+                    begin 
+                        regWrite = 1'b1;	
+                        NS = st_FET;
+                    end
+                    
+                    OP_RG3:
+                    begin
+                        regWrite = 1'b1;
+                        NS = st_FET;
+                    end
+
+                    SYS:
+                    begin
+                        csr_WE = 1'b1;
+                    end
+                    
                     default:  
                     begin 
-                       NS = st_FET;
+                    NS = st_FET;
                     end
-					
+                    
                 endcase
-                if(intr == 1 && NS != st_WB)    // enter interrupt state if inter is enabled and its not entering a 
-                    NS = st_INTR;               // writeback state
+            if(intr == 1 && NS != st_WB)    // enter interrupt state if inter is enabled and its not entering a 
+            NS = st_INTR;               // writeback state
             end
-               
+            
             st_WB:
             begin
-               regWrite = 1'b1; 
-               memRDEN2 = 1'b0;
-               
-               if(intr == 1'b1)         
-                    NS = st_INTR;    
-               else
-                    NS = st_FET;
+                regWrite = 1'b1; 
+                memRDEN2 = 1'b0;   
+                if(intr == 1'b1)         
+                NS = st_INTR;    
+                else
+                NS = st_FET;
             end
             
             st_INTR:
@@ -185,11 +179,10 @@ module CU_FSM(
                 int_taken = 1'b1;
                 //csr_WE = 1'b1;      ??????     
             end
- 
-            default: NS = st_FET;
             
-           
+            default:
+                NS = st_FET;           
+                       
         endcase //- case statement for FSM states
     end
-           
 endmodule
