@@ -25,6 +25,7 @@
 // Revision:
 // Revision 1.00 - File Created - 02-01-2020 (from other people's files)
 //          1.01 - (02-08-2020) switched states to enum type
+//          1.02 - added CSR support
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -39,13 +40,16 @@ module CU_FSM(
     output logic memWE2,
     output logic memRDEN1,
     output logic memRDEN2,
-    output logic rst
+    output logic rst,
+    output logic csr_WE,
+    output logic int_taken
   );
     
-    typedef  enum logic [1:0] {
+    typedef  enum logic [2:0] {
        st_FET,
        st_EX,
-       st_WB
+       st_WB,
+       st_INTR
     }  state_type; 
     state_type  NS,PS; 
       
@@ -59,7 +63,8 @@ module CU_FSM(
         LOAD   = 7'b0000011,
         STORE  = 7'b0100011,
         OP_IMM = 7'b0010011,
-        OP_RG3 = 7'b0110011
+        OP_RG3 = 7'b0110011, 
+        SYS    = 7'b1110011
     } opcode_t;
 	opcode_t OPCODE;    //- symbolic names for instruction opcodes
      
@@ -81,6 +86,7 @@ module CU_FSM(
         //- schedule all output to avoid latch
         pcWrite = 1'b0;    regWrite = 1'b0;      
 		memWE2 = 1'b0;     memRDEN1 = 1'b0;    memRDEN2 = 1'b0;
+		csr_WE = 1'b0;     int_taken = 1'b0;
                    
         case (PS)
             st_FET: //waiting state  
@@ -147,6 +153,11 @@ module CU_FSM(
                        regWrite = 1'b1;
                        NS = st_FET;
 					end
+					///////////////////////////////////////////////////////////////
+					SYS:
+					begin
+					   csr_WE = 1'b1;//????????????????????????
+					end
 					   
                     default:  
                     begin 
@@ -154,16 +165,29 @@ module CU_FSM(
                     end
 					
                 endcase
+                if(intr == 1 && NS != st_WB)    // enter interrupt state if inter is enabled and its not entering a 
+                    NS = st_INTR;               // writeback state
             end
                
             st_WB:
             begin
                regWrite = 1'b1; 
                memRDEN2 = 1'b0;
-               NS = st_FET;
+               
+               if(intr == 1'b1)         
+                    NS = st_INTR;    
+               else
+                    NS = st_FET;
+            end
+            
+            st_INTR:
+            begin
+                int_taken = 1'b1;
+                //csr_WE = 1'b1;      ??????     
             end
  
             default: NS = st_FET;
+            
            
         endcase //- case statement for FSM states
     end

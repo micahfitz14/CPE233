@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Mar  6 12:55:49 2020
-| Host         : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
+| Date         : Sun Mar  8 17:27:08 2020
+| Host         : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
 | Command      : report_methodology -file OTTER_Wrapper_methodology_drc_routed.rpt -pb OTTER_Wrapper_methodology_drc_routed.pb -rpx OTTER_Wrapper_methodology_drc_routed.rpx
 | Design       : OTTER_Wrapper
 | Device       : xc7a35tcpg236-1

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Mar  6 12:55:24 2020
-| Host         : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
+| Date         : Sun Mar  8 17:26:40 2020
+| Host         : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt
 | Design       : OTTER_Wrapper
 | Device       : xc7a35t
@@ -63,18 +63,18 @@ Table of Contents
 +-----------------------------------+-----------------------------------------+--------------------------------------------+------------------+----------------+
 |            Clock Signal           |              Enable Signal              |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
 +-----------------------------------+-----------------------------------------+--------------------------------------------+------------------+----------------+
+|  my_otter/register/count_reg[3]_0 |                                         | my_otter/register/O90                      |                1 |              2 |
 |  my_otter/register/count_reg[3]_1 |                                         |                                            |                1 |              2 |
 |  my_otter/register/count_reg[3]   |                                         |                                            |                1 |              2 |
-|  my_otter/register/count_reg[3]_0 |                                         | my_otter/register/O90                      |                1 |              2 |
 |  SSG_DISP/CathMod/s_clk_500       |                                         | SSG_DISP/CathMod/r_disp_digit[0]_i_1_n_0   |                1 |              4 |
 |  SSG_DISP/CathMod/s_clk_500       |                                         | SSG_DISP/CathMod/r_disp_digit[0]           |                1 |              4 |
 |  CLK_IBUF_BUFG                    |                                         |                                            |                3 |              6 |
 |  sclk_BUFG                        | my_otter/cu_fsm/out[0]                  |                                            |                3 |              8 |
 |  sclk_BUFG                        |                                         |                                            |                6 |             16 |
 |  SSG_DISP/CathMod/s_clk_500       |                                         |                                            |                5 |             18 |
-|  sclk_BUFG                        | my_otter/otter_memory/ioBuffer_reg[0]_0 | my_otter/otter_memory/ioBuffer[15]_i_1_n_0 |               10 |             32 |
 |  sclk_BUFG                        | my_otter/otter_memory/E[0]              |                                            |                6 |             32 |
 |  sclk_BUFG                        | my_otter/otter_memory/LEDS_reg[0][0]    |                                            |                7 |             32 |
+|  sclk_BUFG                        | my_otter/otter_memory/ioBuffer_reg[0]_0 | my_otter/otter_memory/ioBuffer[15]_i_1_n_0 |               10 |             32 |
 |  CLK_IBUF_BUFG                    |                                         | SSG_DISP/CathMod/clear                     |                5 |             40 |
 |  CLK_IBUF_BUFG                    |                                         | clkDIv/sclk_0                              |                8 |             62 |
 |  sclk_BUFG                        | my_otter/cu_fsm/out[1]                  | BTNC_IBUF                                  |                8 |             64 |

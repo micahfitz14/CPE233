@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Mar  6 12:54:43 2020
-# Process ID: 9244
-# Current directory: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1
+# Start of session at: Sun Mar  8 17:25:56 2020
+# Process ID: 15720
+# Current directory: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1
 # Command line: vivado.exe -log OTTER_Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OTTER_Wrapper.tcl -notrace
-# Log file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper.vdi
-# Journal file: C:/Users/Ryan Madden/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1\vivado.jou
+# Log file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1/OTTER_Wrapper.vdi
+# Journal file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
