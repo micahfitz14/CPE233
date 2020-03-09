@@ -26,19 +26,16 @@ module BRANCH_COND_GEN(
     );
     
     always @ (rs1, rs2)
-    begin
+    begin  
+            br_eq = 0;
+            br_lt = 0;
+            br_ltu = 0;
         if (rs1 == rs2)
             br_eq = 1;
         else if ($signed(rs1) < $signed(rs2))
             br_lt = 1;
         else if (rs1 < rs2)
             br_ltu = 1;
-        else
-        begin
-            br_eq = 0;
-            br_lt = 0;
-            br_ltu = 0;
-        end
     end
           
 endmodule

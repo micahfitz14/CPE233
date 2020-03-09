@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sun Mar  8 17:27:09 2020
+| Date             : Mon Mar  9 12:57:28 2020
 | Host             : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
 | Command          : report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx
 | Design           : OTTER_Wrapper
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2317 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1503 |     20800 |            7.23 |
-|   CARRY4                 |    <0.001 |       93 |      8150 |            1.14 |
-|   Register               |    <0.001 |      194 |     41600 |            0.47 |
+| Slice Logic              |    <0.001 |     2501 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1606 |     20800 |            7.72 |
+|   CARRY4                 |    <0.001 |       85 |      8150 |            1.04 |
+|   Register               |    <0.001 |      268 |     41600 |            0.64 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
-|   F7/F8 Muxes            |    <0.001 |      156 |     32600 |            0.48 |
-|   Others                 |     0.000 |       16 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      142 |     32600 |            0.44 |
+|   Others                 |     0.000 |       19 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |    <0.001 |     2795 |       --- |             --- |
+| Signals                  |    <0.001 |     2970 |       --- |             --- |
 | Block RAM                |     0.000 |       16 |        50 |           32.00 |
-| I/O                      |    <0.001 |       46 |       106 |           43.40 |
+| I/O                      |    <0.001 |       47 |       106 |           44.34 |
 | Static Power             |     0.069 |          |           |                 |
 | Total                    |     0.071 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -145,14 +145,15 @@ Table of Contents
 | Name                             | Power (W) |
 +----------------------------------+-----------+
 | OTTER_Wrapper                    |     0.002 |
+|   DB                             |    <0.001 |
 |   SSG_DISP                       |    <0.001 |
 |     CathMod                      |    <0.001 |
 |   clkDIv                         |    <0.001 |
 |   my_otter                       |    <0.001 |
 |     alu_src1_mux                 |    <0.001 |
 |     alu_src2_mux                 |    <0.001 |
-|     condgen                      |    <0.001 |
-|     cu_fsm                       |     0.000 |
+|     cu_fsm                       |    <0.001 |
+|     my_csr                       |     0.000 |
 |     otter_memory                 |    <0.001 |
 |     pc                           |     0.000 |
 |       MY_CNTR                    |     0.000 |

@@ -42,6 +42,7 @@ read_verilog -library xil_defaultlib -sv {
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_01.sv}
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/clk_divider_nbit.sv}
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/reg_nb.sv}
+  {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/CSR_v1_01.sv}
 }
 read_verilog -library xil_defaultlib {
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v}
@@ -58,6 +59,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/fibonacci_fsm.v}
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/univ_sseg.v}
   {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ram_single_port.v}
+  {C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_8t1_nb.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

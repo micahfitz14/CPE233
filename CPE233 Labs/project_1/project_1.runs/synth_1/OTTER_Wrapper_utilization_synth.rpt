@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Mar  8 17:25:49 2020
+| Date         : Mon Mar  9 12:55:56 2020
 | Host         : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
 | Command      : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
 | Design       : OTTER_Wrapper
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1571 |     0 |     20800 |  7.55 |
-|   LUT as Logic             | 1523 |     0 |     20800 |  7.32 |
+| Slice LUTs*                | 1655 |     0 |     20800 |  7.96 |
+|   LUT as Logic             | 1607 |     0 |     20800 |  7.73 |
 |   LUT as Memory            |   48 |     0 |      9600 |  0.50 |
 |     LUT as Distributed RAM |   48 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  205 |     0 |     41600 |  0.49 |
-|   Register as Flip Flop    |  202 |     0 |     41600 |  0.49 |
-|   Register as Latch        |    3 |     0 |     41600 | <0.01 |
-| F7 Muxes                   |  119 |     0 |     16300 |  0.73 |
+| Slice Registers            |  268 |     0 |     41600 |  0.64 |
+|   Register as Flip Flop    |  266 |     0 |     41600 |  0.64 |
+|   Register as Latch        |    2 |     0 |     41600 | <0.01 |
+| F7 Muxes                   |  105 |     0 |     16300 |  0.64 |
 | F8 Muxes                   |   37 |     0 |      8150 |  0.45 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 1     |          Yes |           - |          Set |
+| 0     |          Yes |           - |          Set |
 | 34    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 166   |          Yes |       Reset |            - |
+| 230   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,14 +152,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  738 |                 LUT |
-| LUT4     |  310 |                 LUT |
-| LUT5     |  307 |                 LUT |
-| LUT2     |  268 |                 LUT |
-| FDRE     |  166 |        Flop & Latch |
-| LUT3     |  156 |                 LUT |
-| MUXF7    |  119 |               MuxFx |
-| CARRY4   |   93 |          CarryLogic |
+| LUT6     |  950 |                 LUT |
+| LUT5     |  251 |                 LUT |
+| LUT2     |  251 |                 LUT |
+| LUT3     |  232 |                 LUT |
+| FDRE     |  230 |        Flop & Latch |
+| LUT4     |  202 |                 LUT |
+| MUXF7    |  105 |               MuxFx |
+| CARRY4   |   85 |          CarryLogic |
 | RAMD32   |   72 |  Distributed Memory |
 | MUXF8    |   37 |               MuxFx |
 | FDCE     |   32 |        Flop & Latch |
@@ -167,11 +167,10 @@ Table of Contents
 | RAMS32   |   24 |  Distributed Memory |
 | IBUF     |   19 |                  IO |
 | RAMB36E1 |   16 |        Block Memory |
-| LUT1     |    6 |                 LUT |
+| LUT1     |    5 |                 LUT |
 | FDSE     |    4 |        Flop & Latch |
 | LDCE     |    2 |        Flop & Latch |
 | BUFG     |    2 |               Clock |
-| LDPE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 

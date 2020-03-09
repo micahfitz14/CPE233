@@ -14,4 +14,4 @@ If this HTTPS server uses a certificate signed by a CA represented in
  not match the domain name in the URL).
 If you'd like to turn off curl's verification of the certificate, use
  the -k (or --insecure) option.
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0curl: (6) Could not resolve host: Labs
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0curl: (6) Could not resolve host: Labs
