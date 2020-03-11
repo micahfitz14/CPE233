@@ -21,8 +21,8 @@ module alu(
     begin
         case(alu_fun)
         
-            4'b0000 : RESULT = OP_1 + OP_2;
-            4'b0001 : RESULT = OP_1 << OP_2;    //shift OP_1 left by the value of OP_2
+            4'b0000 : RESULT = $signed(OP_1) + $signed(OP_2);
+            4'b0001 : RESULT = OP_1 << OP_2[4:0];    //shift OP_1 left by the value of OP_2
             4'b0010 : if($signed(OP_1) < $signed(OP_2))
                             RESULT = 1;
                       else
@@ -32,11 +32,11 @@ module alu(
                       else
                             RESULT = 0;
             4'b0100 : RESULT = OP_1 ^ OP_2;
-            4'b0101 : RESULT = OP_1 >> OP_2;    //shift OP_1 right by the value of OP_2
+            4'b0101 : RESULT = OP_1 >> OP_2[4:0];    //shift OP_1 right by the value of OP_2
             4'b0110 : RESULT = OP_1 | OP_2;
             4'b0111 : RESULT = OP_1 & OP_2;
             4'b1000 : RESULT = $signed(OP_1) - $signed(OP_2);
-            4'b1101 : RESULT = $signed(OP_1) >>> $signed(OP_2);   //arithmetic shift right 
+            4'b1101 : RESULT = $signed(OP_1) >>> OP_2[4:0];   //arithmetic shift right 
             4'b1001 : RESULT = OP_1;          
             default : RESULT = 0;
        endcase 

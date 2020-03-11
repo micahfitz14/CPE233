@@ -243,9 +243,9 @@ module CU_DCDR(
                         3'b001: // instr: SLLI
                         begin
                             alu_fun = 4'b0001;
-                            alu_srcA = 1'd0; 
-                            alu_srcB = 2'd1;
-                            rf_wr_sel = 2'd3;
+                            alu_srcA = 1'b0; 
+                            alu_srcB = 2'b01;
+                            rf_wr_sel = 2'b11;
                         end
                         
                         3'b101:
@@ -290,16 +290,16 @@ module CU_DCDR(
                             alu_fun = 4'b1000; // SUB
                         end
                         
-                        3'b001: // SLL
+                        3'b001:                 // SLL
                             alu_fun = 4'b0001;
                         
-                        3'b010: // SLT
+                        3'b010:                 // SLT
                             alu_fun = 4'b0010;
                         
-                        3'b011: // SLTU
+                        3'b011:                 // SLTU
                             alu_fun = 4'b0011; 
                         
-                        3'b100: // XOR     
+                        3'b100:                 // XOR     
                             alu_fun = 4'b0100;
                         
                         3'b101:

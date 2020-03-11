@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18500 
+INFO: Helper process launched with PID 25048 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.398 ; gain = 99.594
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 355.773 ; gain = 98.672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_01.sv:13]
 	Parameter SWITCHES_AD bound to: 285212672 - type: integer 
@@ -101,7 +101,7 @@ WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[2]
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[1]
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.035 ; gain = 166.230
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -178,10 +178,10 @@ WARNING: [Synth 8-3295] tying undriven pin pc:mepc[0] to constant 0 [C:/Users/mi
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.035 ; gain = 166.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.035 ; gain = 166.230
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -197,22 +197,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 757.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 755.672 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.426 ; gain = 500.621
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.426 ; gain = 500.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.426 ; gain = 500.621
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5587] ROM size for "regWrite" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "memWE2" won't be mapped to RAM because it is too sparse
@@ -254,7 +254,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [C:/Users/micah/Doc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'debounce_one_shot'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 757.426 ; gain = 500.621
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 755.672 ; gain = 498.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -489,30 +489,30 @@ INFO: [Synth 8-5545] ROM "clkDIv/div_cnt" won't be mapped to RAM because address
 INFO: [Synth 8-5545] ROM "clkDIv/sclk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "LEDS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_SSEG" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[16]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[17]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[18]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[19]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[20]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[21]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[22]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[23]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[24]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[25]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[26]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[27]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[28]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[29]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[30]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_otter/otter_memory/\ioBuffer_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_otter/\cu_fsm/NS_reg[2] )
-WARNING: [Synth 8-3332] Sequential element (ioBuffer_reg[31]) is unused and will be removed from module Memory.
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[30]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[31]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[28]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[29]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[26]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[27]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[24]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[25]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[16]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[17]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[22]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[23]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[20]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[21]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[18]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_otter/\otter_memory/ioBuffer_reg[19] )
+WARNING: [Synth 8-3332] Sequential element (otter_memory/ioBuffer_reg[19]) is unused and will be removed from module OTTER_MCU.
 WARNING: [Synth 8-3332] Sequential element (cu_fsm/NS_reg[2]) is unused and will be removed from module OTTER_MCU.
 WARNING: [Synth 8-3332] Sequential element (cu_fsm/PS_reg[2]) is unused and will be removed from module OTTER_MCU.
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SSG_DISP/CathMod/CATHODES_reg[7] )
 WARNING: [Synth 8-3332] Sequential element (SSG_DISP/CathMod/CATHODES_reg[7]) is unused and will be removed from module OTTER_Wrapper.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 757.426 ; gain = 500.621
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 755.672 ; gain = 498.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -538,38 +538,38 @@ Note: The table above is a preliminary report that shows the Distributed RAMs at
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/i_2/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_otter/i_4/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -580,13 +580,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 758.617 ; gain = 501.813
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 757.250 ; gain = 500.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 779.980 ; gain = 523.176
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 777.828 ; gain = 520.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -652,7 +652,7 @@ INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_re
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -676,7 +676,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -689,7 +689,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -701,25 +701,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -737,14 +737,14 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BUFG       |     2|
 |2     |CARRY4     |    85|
-|3     |LUT1       |     5|
+|3     |LUT1       |     4|
 |4     |LUT2       |   251|
-|5     |LUT3       |   232|
-|6     |LUT4       |   202|
-|7     |LUT5       |   251|
-|8     |LUT6       |   950|
-|9     |MUXF7      |   105|
-|10    |MUXF8      |    37|
+|5     |LUT3       |   138|
+|6     |LUT4       |   219|
+|7     |LUT5       |   290|
+|8     |LUT6       |   932|
+|9     |MUXF7      |    87|
+|10    |MUXF8      |    39|
 |11    |RAM32M     |    12|
 |12    |RAMB36E1   |     1|
 |13    |RAMB36E1_1 |     1|
@@ -760,34 +760,34 @@ Report Cell Usage:
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+------------------+------------------+------+
-|      |Instance          |Module            |Cells |
-+------+------------------+------------------+------+
-|1     |top               |                  |  2463|
-|2     |  DB              |debounce_one_shot |    34|
-|3     |  SSG_DISP        |SevSegDisp        |    88|
-|4     |    CathMod       |CathodeDriver     |    88|
-|5     |  clkDIv          |clk_div           |    52|
-|6     |  my_otter        |OTTER_MCU         |  2175|
-|7     |    alu_src1_mux  |mux_2t1_nb        |    94|
-|8     |    alu_src2_mux  |mux_4t1_nb        |    53|
-|9     |    cu_fsm        |CU_FSM            |    45|
-|10    |    my_csr        |CSR               |    65|
-|11    |    otter_memory  |Memory            |  1657|
-|12    |    pc            |ProgramCounter    |    57|
-|13    |      MY_CNTR     |cntr_up_clr_nb    |    49|
-|14    |      MY_RCA      |rca_nb            |     8|
-|15    |    reg_input_mux |mux_4t1_nb_0      |    98|
-|16    |    register      |RegFile           |   106|
-+------+------------------+------------------+------+
++------+-----------------------------+------------------+------+
+|      |Instance                     |Module            |Cells |
++------+-----------------------------+------------------+------+
+|1     |top                          |                  |  2390|
+|2     |  DB                         |debounce_one_shot |    35|
+|3     |  SSG_DISP                   |SevSegDisp        |    88|
+|4     |    CathMod                  |CathodeDriver     |    88|
+|5     |  clkDIv                     |clk_div           |    52|
+|6     |  my_otter                   |OTTER_MCU         |  2101|
+|7     |    arithmitic_logic_unit    |alu               |    24|
+|8     |    branch_address_generator |BRANCH_ADDR_GEN   |    36|
+|9     |    condgen                  |BRANCH_COND_GEN   |    11|
+|10    |    cu_fsm                   |CU_FSM            |    43|
+|11    |    my_csr                   |CSR               |    97|
+|12    |    otter_memory             |Memory            |  1709|
+|13    |    pc                       |ProgramCounter    |    57|
+|14    |      MY_CNTR                |cntr_up_clr_nb    |    49|
+|15    |      MY_RCA                 |rca_nb            |     8|
+|16    |    register                 |RegFile           |   124|
++------+-----------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 837.605 ; gain = 580.801
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 837.605 ; gain = 246.410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 837.605 ; gain = 580.801
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 829.195 ; gain = 239.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 829.195 ; gain = 572.094
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 260 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -799,9 +799,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 196 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 837.605 ; gain = 593.813
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 829.195 ; gain = 584.863
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 837.605 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 12:55:56 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 829.195 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 11 13:00:29 2020...

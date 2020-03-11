@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1583783709">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1583956784">
   <File Type="BITSTR-BMM" Name="OTTER_Wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="OTTER_Wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="OTTER_Wrapper_timing_summary_init.rpt"/>
