@@ -22,7 +22,7 @@ module alu(
         case(alu_fun)
         
             4'b0000 : RESULT = $signed(OP_1) + $signed(OP_2);
-            4'b0001 : RESULT = OP_1 << OP_2[4:0];    //shift OP_1 left by the value of OP_2
+            4'b0001 : RESULT = OP_1 << OP_2[4:0];    //shift OP_1 left by the lower 5 bits value of OP_2
             4'b0010 : if($signed(OP_1) < $signed(OP_2))
                             RESULT = 1;
                       else

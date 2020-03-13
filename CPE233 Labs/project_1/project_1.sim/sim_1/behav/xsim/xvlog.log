@@ -1,25 +1,2 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_ADDR_GEN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BRANCH_ADDR_GEN
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/IMMED_GEN.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module IMMED_GEN
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/ProgramCounter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ProgramCounter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cntr_up_clr_nb
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:35]
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/cntr_up_clr_nb.v:36]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2t1_nb
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:35]
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_2t1_nb.v:36]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_4t1_nb
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:41]
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/mux_4t1_nb.v:42]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rca_nb
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:36]
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:37]
-WARNING: [VRFC 10-756] identifier n is used before its declaration [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/rca_nb.v:39]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/BRANCH_COND_GEN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRANCH_COND_GEN

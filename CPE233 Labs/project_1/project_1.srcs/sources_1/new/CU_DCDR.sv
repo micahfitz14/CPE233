@@ -126,9 +126,9 @@ module CU_DCDR(
                         3'b000:    // instr: BEQ
                         begin
                             if (br_eq == 1)
-                            pcSource = 3'b011;
+                                pcSource = 3'b010;
                             else
-                            pcSource = 3'b000;
+                                pcSource = 3'b000;
                         end
                     
                         3'b001:    // instr: BNE
@@ -149,7 +149,7 @@ module CU_DCDR(
                         
                         3'b101:    // instr: BGE
                         begin
-                            if (br_lt == 0 && br_eq == 0)
+                            if (br_lt == 0 || br_eq == 1)
                             pcSource = 3'b010;
                             else
                             pcSource = 3'b000;
@@ -157,7 +157,7 @@ module CU_DCDR(
                         
                         3'b110:    // instr: BLTU
                         begin
-                            if (br_ltu && br_eq == 0)
+                            if (br_ltu == 1 && br_eq == 0)
                             pcSource = 3'b010;
                             else
                             pcSource = 3'b000;
@@ -165,7 +165,7 @@ module CU_DCDR(
                         
                         3'b111:    // instr: BGEU
                         begin
-                            if (br_ltu && br_eq == 0)
+                            if (br_ltu == 0 || br_eq == 1)
                             pcSource = 3'b010;
                             else
                             pcSource = 2'b000;
@@ -216,7 +216,7 @@ module CU_DCDR(
                             rf_wr_sel = 2'd3;
                         end
                         
-                        3'b100: // instr: ORI
+                        3'b110: // instr: ORI
                         begin
                             alu_fun = 4'b0110;
                             alu_srcA = 1'd0; 
@@ -224,7 +224,7 @@ module CU_DCDR(
                             rf_wr_sel = 2'd3;
                         end
                         
-                        3'b110: // instr: XORI
+                        3'b100: // instr: XORI
                         begin
                             alu_fun = 4'b0100;
                             alu_srcA = 1'd0; 
@@ -324,10 +324,9 @@ module CU_DCDR(
                 SYS:
                 begin
                     case(FUNC3)
-                        3'b000:     // MREG
+                        3'b000:     // MRET
                         begin
                             pcSource = 3'b101;
-                            
                         end
                         
                         3'b001:     // CSRRW

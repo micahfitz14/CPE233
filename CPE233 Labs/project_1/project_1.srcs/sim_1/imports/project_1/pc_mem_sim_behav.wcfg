@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="249060290000fs"></ZoomStartTime>
-      <ZoomEndTime time="250008290001fs"></ZoomEndTime>
-      <Cursor1Time time="701000000000fs"></Cursor1Time>
+      <ZoomStartTime time="5200442500000fs"></ZoomStartTime>
+      <ZoomEndTime time="5201394500001fs"></ZoomEndTime>
+      <Cursor1Time time="5201000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="164"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -28,18 +28,18 @@
       <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
       <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/cu_fsm/PS" type="array">
+      <obj_property name="ElementShortName">PS[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/cu_dcdr/FUNC3" type="array">
       <obj_property name="ElementShortName">FUNC3[2:0]</obj_property>
       <obj_property name="ObjectShortName">FUNC3[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/arithmitic_logic_unit/OP_1" type="array">
-      <obj_property name="ElementShortName">OP_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">OP_1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/arithmitic_logic_unit/OP_2" type="array">
-      <obj_property name="ElementShortName">OP_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">OP_2[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/pc/address" type="array">
+      <obj_property name="ElementShortName">address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">address[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/arithmitic_logic_unit/alu_fun" type="array">
       <obj_property name="ElementShortName">alu_fun[3:0]</obj_property>
@@ -50,10 +50,6 @@
       <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
       <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/pc/address" type="array">
-      <obj_property name="ElementShortName">address[31:0]</obj_property>
-      <obj_property name="ObjectShortName">address[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[1]" type="array">
       <obj_property name="ElementShortName">[1][31:0]</obj_property>
       <obj_property name="ObjectShortName">[1][31:0]</obj_property>
@@ -61,7 +57,11 @@
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[2]" type="array">
       <obj_property name="ElementShortName">[2][31:0]</obj_property>
       <obj_property name="ObjectShortName">[2][31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[3]" type="array">
+      <obj_property name="ElementShortName">[3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[29]" type="array">
       <obj_property name="ElementShortName">[29][31:0]</obj_property>
@@ -82,5 +82,25 @@
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/rs2" type="array">
       <obj_property name="ElementShortName">rs2[31:0]</obj_property>
       <obj_property name="ObjectShortName">rs2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[10]" type="array">
+      <obj_property name="ElementShortName">[10][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[12]" type="array">
+      <obj_property name="ElementShortName">[12][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/condgen/br_eq" type="logic">
+      <obj_property name="ElementShortName">br_eq</obj_property>
+      <obj_property name="ObjectShortName">br_eq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/condgen/br_lt" type="logic">
+      <obj_property name="ElementShortName">br_lt</obj_property>
+      <obj_property name="ObjectShortName">br_lt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/condgen/br_ltu" type="logic">
+      <obj_property name="ElementShortName">br_ltu</obj_property>
+      <obj_property name="ObjectShortName">br_ltu</obj_property>
    </wvobject>
 </wave_config>

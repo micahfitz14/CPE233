@@ -176,8 +176,7 @@
             
             st_INTR:
             begin
-                int_taken = 1'b1;
-                //csr_WE = 1'b1;      ??????     
+                int_taken = 1'b1;      
             end
             
             default:

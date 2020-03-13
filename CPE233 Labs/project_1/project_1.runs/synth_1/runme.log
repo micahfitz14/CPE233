@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25048 
+INFO: Helper process launched with PID 37612 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 355.773 ; gain = 98.672
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.727 ; gain = 99.734
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.srcs/sources_1/new/OTTER_Wrapper_v1_01.sv:13]
 	Parameter SWITCHES_AD bound to: 285212672 - type: integer 
@@ -101,7 +101,7 @@ WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[2]
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[1]
 WARNING: [Synth 8-3331] design IMMED_GEN has unconnected port ir[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.590 ; gain = 166.598
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -178,10 +178,10 @@ WARNING: [Synth 8-3295] tying undriven pin pc:mepc[0] to constant 0 [C:/Users/mi
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.590 ; gain = 166.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 422.785 ; gain = 165.684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.590 ; gain = 166.598
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -197,22 +197,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 755.672 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 756.797 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 756.797 ; gain = 499.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 756.797 ; gain = 499.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.672 ; gain = 498.570
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 756.797 ; gain = 499.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5587] ROM size for "regWrite" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "memWE2" won't be mapped to RAM because it is too sparse
@@ -254,7 +254,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [C:/Users/micah/Doc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'debounce_one_shot'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 755.672 ; gain = 498.570
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 756.797 ; gain = 499.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -477,10 +477,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "cu_dcdr/alu_fun" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "cu_dcdr/alu_srcA" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "cu_dcdr/alu_srcB" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5587] ROM size for "cu_dcdr/rf_wr_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "alu_fun" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_srcA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alu_srcB" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "rf_wr_sel" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "DB/s_count_inc" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DB/s_count_inc" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DB/DB_BTN" won't be mapped to RAM because it is too sparse
@@ -489,6 +489,7 @@ INFO: [Synth 8-5545] ROM "clkDIv/div_cnt" won't be mapped to RAM because address
 INFO: [Synth 8-5545] ROM "clkDIv/sclk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "LEDS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_SSEG" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design CU_DCDR has unconnected port int_taken
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_otter/\cu_fsm/NS_reg[2] )
 INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[30]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
 INFO: [Synth 8-3886] merging instance 'my_otter/otter_memory/ioBuffer_reg[31]' (FDE) to 'my_otter/otter_memory/ioBuffer_reg[16]'
@@ -510,9 +511,73 @@ WARNING: [Synth 8-3332] Sequential element (otter_memory/ioBuffer_reg[19]) is un
 WARNING: [Synth 8-3332] Sequential element (cu_fsm/NS_reg[2]) is unused and will be removed from module OTTER_MCU.
 WARNING: [Synth 8-3332] Sequential element (cu_fsm/PS_reg[2]) is unused and will be removed from module OTTER_MCU.
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SSG_DISP/CathMod/CATHODES_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[31]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[30]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[29]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[28]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[27]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[26]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[25]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[24]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[23]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[22]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[21]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[20]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[19]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[18]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[17]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[16]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[15]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[14]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[13]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[12]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[11]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[10]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[9]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[8]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[7]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[6]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[5]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[4]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[3]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[2]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[1]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MTVEC_reg[0]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[31]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[30]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[29]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[28]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[27]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[26]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[25]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[24]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[23]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[22]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[21]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[20]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[19]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[18]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[17]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[16]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[15]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[14]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[13]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[12]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[11]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[10]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[9]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[8]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[7]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[6]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[5]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[4]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[3]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[2]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[1]) is unused and will be removed from module OTTER_MCU.
+WARNING: [Synth 8-3332] Sequential element (my_csr/CSR_MEPC_reg[0]) is unused and will be removed from module OTTER_MCU.
 WARNING: [Synth 8-3332] Sequential element (SSG_DISP/CathMod/CATHODES_reg[7]) is unused and will be removed from module OTTER_Wrapper.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 755.672 ; gain = 498.570
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 756.797 ; gain = 499.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -580,13 +645,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 757.250 ; gain = 500.148
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 758.867 ; gain = 501.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 777.828 ; gain = 520.727
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 779.574 ; gain = 522.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -652,7 +717,7 @@ INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_re
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance my_otter/otter_memory/memory_reg_bram_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -676,7 +741,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -689,7 +754,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -701,25 +766,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -737,14 +802,14 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BUFG       |     2|
 |2     |CARRY4     |    85|
-|3     |LUT1       |     4|
-|4     |LUT2       |   251|
-|5     |LUT3       |   138|
-|6     |LUT4       |   219|
-|7     |LUT5       |   290|
-|8     |LUT6       |   932|
-|9     |MUXF7      |    87|
-|10    |MUXF8      |    39|
+|3     |LUT1       |    34|
+|4     |LUT2       |   170|
+|5     |LUT3       |   144|
+|6     |LUT4       |   263|
+|7     |LUT5       |   257|
+|8     |LUT6       |   991|
+|9     |MUXF7      |   114|
+|10    |MUXF8      |    37|
 |11    |RAM32M     |    12|
 |12    |RAMB36E1   |     1|
 |13    |RAMB36E1_1 |     1|
@@ -752,7 +817,7 @@ Report Cell Usage:
 |15    |RAMB36E1_3 |     1|
 |16    |RAMB36E1_4 |    12|
 |17    |FDCE       |    32|
-|18    |FDRE       |   230|
+|18    |FDRE       |   166|
 |19    |FDSE       |     4|
 |20    |LD         |     2|
 |21    |IBUF       |    19|
@@ -763,31 +828,31 @@ Report Instance Areas:
 +------+-----------------------------+------------------+------+
 |      |Instance                     |Module            |Cells |
 +------+-----------------------------+------------------+------+
-|1     |top                          |                  |  2390|
+|1     |top                          |                  |  2376|
 |2     |  DB                         |debounce_one_shot |    35|
 |3     |  SSG_DISP                   |SevSegDisp        |    88|
 |4     |    CathMod                  |CathodeDriver     |    88|
 |5     |  clkDIv                     |clk_div           |    52|
-|6     |  my_otter                   |OTTER_MCU         |  2101|
+|6     |  my_otter                   |OTTER_MCU         |  2087|
 |7     |    arithmitic_logic_unit    |alu               |    24|
 |8     |    branch_address_generator |BRANCH_ADDR_GEN   |    36|
 |9     |    condgen                  |BRANCH_COND_GEN   |    11|
-|10    |    cu_fsm                   |CU_FSM            |    43|
-|11    |    my_csr                   |CSR               |    97|
-|12    |    otter_memory             |Memory            |  1709|
+|10    |    cu_fsm                   |CU_FSM            |    10|
+|11    |    my_csr                   |CSR               |     1|
+|12    |    otter_memory             |Memory            |  1824|
 |13    |    pc                       |ProgramCounter    |    57|
 |14    |      MY_CNTR                |cntr_up_clr_nb    |    49|
 |15    |      MY_RCA                 |rca_nb            |     8|
 |16    |    register                 |RegFile           |   124|
 +------+-----------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 829.195 ; gain = 572.094
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 829.195 ; gain = 239.207
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 829.195 ; gain = 572.094
+Synthesis finished with 0 errors, 0 critical warnings and 70 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 844.867 ; gain = 254.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 844.867 ; gain = 587.875
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 260 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 285 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -797,11 +862,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-196 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
+196 Infos, 146 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 829.195 ; gain = 584.863
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 844.867 ; gain = 600.320
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 829.195 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 11 13:00:29 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 844.867 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 13 12:36:14 2020...

@@ -66,7 +66,7 @@ module OTTER_MCU(
         .MEM_WE2   (memWE2),
         .MEM_ADDR1 (addr[15:2]),
         .MEM_ADDR2 (iobus_addr),
-        .MEM_DIN2  (1'b0),  
+        .MEM_DIN2  (rs2),  
         .MEM_SIZE  (ir[13:12]),
         .MEM_SIGN  (ir[14]),
         .IO_IN     (iobus_in),
