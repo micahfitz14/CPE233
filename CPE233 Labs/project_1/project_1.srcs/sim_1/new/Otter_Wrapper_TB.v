@@ -47,15 +47,11 @@ module Otter_Wrapper_TB();
            end                        
      initial        
           begin           
-               BTNC=1;
-               SWITCHES = 16'hff00;
+               BTNC=1; // reset signal on
+               SWITCHES = 16'hff00; // some input on the switches
                
                #40
                
                BTNC = 0;
           end
-    
-    
-    
-    
 endmodule
