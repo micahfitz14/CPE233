@@ -2,3 +2,6 @@ Running: xsim.dir/Otter_Wrapper_TB_behav/xsimk.exe -simmode gui -wdb Otter_Wrapp
 Design successfully loaded
 Design Loading Memory Usage: 5372 KB (Peak: 5372 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7532 KB (Peak: 7532 KB)
+Simulation CPU Usage: 46 ms
