@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Engineer: J. Calllenes
-//           P. Hummel
+// Engineer: Micah Fitzgerald and Ryan Madden
 // 
 // Create Date: 01/20/2019 10:36:50 AM
 // Description: OTTER Wrapper (with Debounce, Switches, LEDS, and SSEG)
@@ -16,8 +15,8 @@ module OTTER_Wrapper(
    input BTNC,
    input [15:0] SWITCHES,
    output logic [15:0] LEDS,
-   output [7:0] CATHODES,
-   output [3:0] ANODES
+   output logic[7:0] CATHODES,
+   output logic [3:0] ANODES
    );
        
    
@@ -31,6 +30,7 @@ module OTTER_Wrapper(
     // In future labs you can add more MMIO
     localparam LEDS_AD      = 32'h11080000;
     localparam SSEG_AD     = 32'h110C0000;
+    localparam ANODES_AD   = 32'h111C0000;
    
     
    // Signals for connecting OTTER_MCU to OTTER_wrapper /////////////////////////
@@ -44,7 +44,7 @@ module OTTER_Wrapper(
    logic [31:0] IOBUS_out,IOBUS_in,IOBUS_addr;
    logic IOBUS_wr;
    
-   assign s_interrupt = btn_int;
+   //assign s_interrupt = btn_int;
    
                    
 OTTER_MCU  my_otter(
@@ -57,12 +57,22 @@ OTTER_MCU  my_otter(
      .iobus_wr    (IOBUS_wr)   );                   
                    
 
-   // Declare Seven Segment Display /////////////////////////////////////////
-   SevSegDisp SSG_DISP (.DATA_IN(r_SSEG), .CLK(CLK), .MODE(1'b0),
-                       .CATHODES(CATHODES), .ANODES(ANODES));
+
    
-   // Declare Debouncer One Shot  ///////////////////////////////////////////
-   debounce_one_shot DB(.CLK(sclk), .BTN(BTNL), .DB_BTN(btn_int));
+   // Declare Debouncer ///////////////////////////////////////////
+     DBounce #(.n(5)) my_dbounce(
+       .clk    (sclk),
+       .sig_in (BTNL),
+       .DB_out (btn_int)   );
+       
+       
+   // Declare One Shot ////////////////////////////////////////////
+     one_shot_bdir  #(.n(3)) my_oneshot (
+       .clk           (sclk),
+       .sig_in        (btn_int),
+       .pos_pulse_out (s_interrupt), 
+       .neg_pulse_out ()                    ); 
+   
    
       
    clk_div clkDIv(CLK, sclk);
@@ -75,8 +85,9 @@ OTTER_MCU  my_otter(
      
         if(IOBUS_wr)
             case(IOBUS_addr)
-                LEDS_AD: LEDS <= IOBUS_out;    
-                SSEG_AD: r_SSEG <= IOBUS_out[15:0];
+                LEDS_AD:    LEDS <= IOBUS_out;                  //-  connect correct peripherals to MCU output
+                SSEG_AD:    CATHODES <= IOBUS_out[15:0];
+                ANODES_AD:  ANODES <= IOBUS_out[3:0];
              
             endcase
           
@@ -92,4 +103,3 @@ OTTER_MCU  my_otter(
         endcase
     end
    endmodule
-

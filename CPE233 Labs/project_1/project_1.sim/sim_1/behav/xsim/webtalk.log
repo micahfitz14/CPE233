@@ -2,10 +2,10 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Mar 14 22:34:50 2020
-# Process ID: 16360
+# Start of session at: Mon Mar 16 13:22:18 2020
+# Process ID: 3476
 # Current directory: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Wrapper_intr_lab_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Otter_Wrapper_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/micah/Documents/GitHub/CPE233/CPE233 Labs/project_1/project_1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
@@ -14,4 +14,4 @@ invalid command name "%"
     while executing
 "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
     (file "C:/Users/micah/Documents/GitHub/CPE233/CPE233" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Sat Mar 14 22:34:50 2020...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 16 13:22:18 2020...

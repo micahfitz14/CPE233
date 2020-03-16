@@ -3,123 +3,75 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Wrapper_intr_lab_TB_behav.wdb" id="1">
+      <db_ref path="Otter_Wrapper_TB_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Wrapper_intr_lab_TB" />
+            <top_module name="Otter_Wrapper_TB" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5634980000fs"></ZoomStartTime>
-      <ZoomEndTime time="6250980001fs"></ZoomEndTime>
-      <Cursor1Time time="6042980000fs"></Cursor1Time>
+      <ZoomStartTime time="377721821fs"></ZoomStartTime>
+      <ZoomEndTime time="2500484415fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="174"></NameColumnWidth>
-      <ValueColumnWidth column_width="86"></ValueColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/pc/CLK" type="logic">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/cu_fsm/PS" type="array">
-      <obj_property name="ElementShortName">PS[2:0]</obj_property>
-      <obj_property name="ObjectShortName">PS[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/cu_fsm/OPCODE" type="array">
-      <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
-      <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
-   </wvobject>
+   <WVObjectSize size="11" />
    <wvobject type="divider" fp_name="divider56">
       <obj_property name="label">PC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/pc/address" type="array">
-      <obj_property name="ElementShortName">address[31:0]</obj_property>
-      <obj_property name="ObjectShortName">address[31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider57">
       <obj_property name="label">_</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/cu_dcdr/pcSource" type="array">
-      <obj_property name="ElementShortName">pcSource[2:0]</obj_property>
-      <obj_property name="ObjectShortName">pcSource[2:0]</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider49">
       <obj_property name="label">Reset Button</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/BTNC" type="logic">
-      <obj_property name="ElementShortName">BTNC</obj_property>
-      <obj_property name="ObjectShortName">BTNC</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider50">
       <obj_property name="label">Interrupt Button</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/BTNL" type="logic">
-      <obj_property name="ElementShortName">BTNL</obj_property>
-      <obj_property name="ObjectShortName">BTNL</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider62">
       <obj_property name="label">Interrupt PC return addr</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/my_csr/CSR_MEPC" type="array">
-      <obj_property name="ElementShortName">CSR_MEPC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CSR_MEPC[31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider58">
       <obj_property name="label">Interrupt vector addr</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/my_csr/CSR_MTVEC" type="array">
-      <obj_property name="ElementShortName">CSR_MTVEC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CSR_MTVEC[31:0]</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider59">
       <obj_property name="label">Interrupt Mask</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/my_csr/CSR_MIE" type="logic">
-      <obj_property name="ElementShortName">CSR_MIE</obj_property>
-      <obj_property name="ObjectShortName">CSR_MIE</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider60">
       <obj_property name="label">CSR write enable</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/cu_fsm/csr_WE" type="logic">
-      <obj_property name="ElementShortName">csr_WE</obj_property>
-      <obj_property name="ObjectShortName">csr_WE</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider61">
       <obj_property name="label">Interrupt taken</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/cu_fsm/int_taken" type="logic">
-      <obj_property name="ElementShortName">int_taken</obj_property>
-      <obj_property name="ObjectShortName">int_taken</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider54">
       <obj_property name="label">Output LED</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/Wrapper_intr_lab_TB/my_otter_wrapper/my_otter/register/reg_file[20]" type="array">
-      <obj_property name="ElementShortName">[20][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+   <wvobject fp_name="/Otter_Wrapper_TB/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
 </wave_config>
