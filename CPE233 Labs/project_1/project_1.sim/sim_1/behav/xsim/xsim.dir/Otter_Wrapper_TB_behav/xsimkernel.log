@@ -1,7 +1,4 @@
-Running: xsim.dir/Otter_Wrapper_TB_behav/xsimk.exe -simmode gui -wdb Otter_Wrapper_TB_behav.wdb -simrunnum 0 -socket 61564
+Running: xsim.dir/Otter_Wrapper_TB_behav/xsimk.exe -simmode gui -wdb Otter_Wrapper_TB_behav.wdb -simrunnum 0 -socket 62057
 Design successfully loaded
-Design Loading Memory Usage: 5384 KB (Peak: 5384 KB)
+Design Loading Memory Usage: 5380 KB (Peak: 5380 KB)
 Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 6200 KB (Peak: 6200 KB)
-Simulation CPU Usage: 15 ms
