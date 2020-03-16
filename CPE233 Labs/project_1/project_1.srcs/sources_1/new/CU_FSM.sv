@@ -151,7 +151,8 @@
 
                     SYS:
                     begin
-                        csr_WE = 1'b1;
+                        csr_WE = 1'b1;          // write enable for CSR
+                        NS = st_FET;            // happens if its writing mtvec
                     end
                     
                     default:  
@@ -160,8 +161,11 @@
                     end
                     
                 endcase
-            if(intr == 1 && NS != st_WB)    // enter interrupt state if inter is enabled and its not entering a 
-            NS = st_INTR;               // writeback state
+                
+                if(intr == 1'b1 && NS != st_WB)    // enter interrupt state if inter is enabled and its not entering a 
+                    begin
+                        NS = st_INTR;           
+                    end
             end
             
             st_WB:
@@ -169,14 +173,17 @@
                 regWrite = 1'b1; 
                 memRDEN2 = 1'b0;   
                 if(intr == 1'b1)         
-                NS = st_INTR;    
+                    NS = st_INTR;    
                 else
-                NS = st_FET;
+                    NS = st_FET;
             end
             
             st_INTR:
             begin
-                int_taken = 1'b1;      
+                pcWrite = 1'b1;
+                int_taken = 1'b1; // tell CSR module that its in interrupt state
+                csr_WE = 1'b1;    // write enable for mepc input
+                NS = st_FET;   
             end
             
             default:

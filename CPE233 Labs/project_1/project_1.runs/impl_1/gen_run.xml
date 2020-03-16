@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1584128128">
+  <File Type="BITSTR-BMM" Name="OTTER_Wrapper_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="OTTER_Wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="OTTER_Wrapper.tcl"/>
-  <File Type="BITSTR-BMM" Name="OTTER_Wrapper_bd.bmm"/>
+  <File Type="OPT-DCP" Name="OTTER_Wrapper_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="OTTER_Wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="OTTER_Wrapper_reports.tcl"/>
-  <File Type="OPT-DCP" Name="OTTER_Wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="OTTER_Wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="OTTER_Wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="OTTER_Wrapper_pwropt.dcp"/>
@@ -25,19 +25,20 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="OTTER_Wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="OTTER_Wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="OTTER_Wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="OTTER_Wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="OTTER_Wrapper.ltx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="OTTER_Wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="OTTER_Wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="OTTER_Wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="OTTER_Wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="OTTER_Wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OTTER_Wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="OTTER_Wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OTTER_Wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="OTTER_Wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="OTTER_Wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="OTTER_Wrapper_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="OTTER_Wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="OTTER_Wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="OTTER_Wrapper_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="OTTER_Wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="OTTER_Wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="OTTER_Wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="OTTER_Wrapper_bus_skew_routed.pb"/>
@@ -48,7 +49,6 @@
   <File Type="BITSTR-RBT" Name="OTTER_Wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="OTTER_Wrapper.nky"/>
   <File Type="BG-DRC" Name="OTTER_Wrapper.drc"/>
-  <File Type="RDI-RDI" Name="OTTER_Wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

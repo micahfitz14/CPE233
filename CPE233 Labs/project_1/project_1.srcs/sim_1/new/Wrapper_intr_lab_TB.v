@@ -18,23 +18,33 @@
 
 module Wrapper_intr_lab_TB();
 
+    //- inputs
     reg CLK;
-    reg BTNL;
-    reg BTNC;
+    reg [4:0] BUTTONS;
     reg [15:0] SWITCHES; 
+    
+    //- outputs
     wire [15:0] LEDS;
     wire [7:0] CATHODES;
     wire [3:0] ANODES;
      
+    //- instantation of wapper file from lab 5. used in this lab 7 
     OTTER_Wrapper my_otter_wrapper(
-        .CLK         (CLK),
-        .BTNL        (BTNL),
-        .BTNC        (BTNC),
-        .SWITCHES    (SWITCHES),
-        .LEDS        (LEDS),
-        .CATHODES    (CATHODES),
-        .ANODES      (ANODES)       );
+        .clk         (CLK),
+        .buttons     (BUTTONS),
+        .switches    (SWITCHES),
+        .leds        (LEDS),
+        .segs        (CATHODES),
+        .an          (ANODES)       );
         
+     reg BTNL, BTNC;           //- assign wires to the reset and interrupt buttons
+     
+     always@(*)
+     begin
+         BUTTONS[4] = BTNL;
+         BUTTONS[3] = BTNC;
+     end
+       
            //- Generate periodic clock signal    
     initial    
         begin       
@@ -43,22 +53,29 @@ module Wrapper_intr_lab_TB();
         end                        
      initial        
           begin           
-               BTNC=1; // reset signal on
+               BTNC = 1; // reset signal on
+               BTNL = 0; // clear intr signal
                SWITCHES = 16'hff00; // some input on the switches
                
                #40
                
                BTNC = 0; // reset signal off
               
+               #4000
+               
+               BTNL = 1; // interrupt signal on
+               
                #200
                
-               BTNL = 1;
+               BTNL = 0; // interrupt signal off
                
-               #10
+               #1500
                
-               BTNL = 0;
+               BTNL = 1; // interrupt signal on
                
+               #200
                
+               BTNL = 0; // interrupt signal off
                
                
           end

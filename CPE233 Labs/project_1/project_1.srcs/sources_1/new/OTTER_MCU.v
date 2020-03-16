@@ -27,8 +27,9 @@ module OTTER_MCU(
     wire [1:0] alu_srcB, rf_wr_sel;                                     //PC, alu, reg input
     wire PCWrite, rst, regWrite, memWE2, memRDEN1, memRDEN2, alu_srcA, br_eq, br_lt, br_ltu;
     
-    wire intr_connect, int_taken, csr_WE;                                         //interrupts
-    wire [31:0] mepc, mtvec, csr_reg, csr_mie;                                    // CSR outputs
+    wire intr_connect, int_taken, csr_WE;                                         // interrupts
+    wire [31:0] mepc, mtvec, csr_reg;                                             // CSR outputs
+    wire csr_mie;                                                                 
   
     
     assign iobus_out = rs2;
@@ -55,6 +56,8 @@ module OTTER_MCU(
         .jalr       (jalr),
         .branch     (branch),
         .jal        (jal),
+        .mtvec      (mtvec),
+        .mepc       (mepc),
         .address    (addr),
         .next_addr  (next_addr)
         );
@@ -132,7 +135,7 @@ module OTTER_MCU(
         .alu_fun    (alu_fun),
         .RESULT     (iobus_addr)    );  
         
-    assign intr_connect = csr_mie && intr;              //and of intr and mie going into FSM
+    assign intr_connect = csr_mie & intr;              //and of intr and mie going into FSM
     
     CU_FSM cu_fsm(
         .intr     (intr_connect),
@@ -155,6 +158,7 @@ module OTTER_MCU(
         .opcode    (ir[6:0]),    //-  ir[6:0]
         .func7     (ir[31:25]),    //-  ir[31:25]
         .func3     (ir[14:12]),    //-  ir[14:12] 
+        .int_taken (int_taken),    //- interrupt taken signal from FSM
         .alu_fun   (alu_fun),
         .pcSource  (pcSource),
         .alu_srcA  (alu_srcA),
