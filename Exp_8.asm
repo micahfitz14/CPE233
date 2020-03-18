@@ -26,7 +26,7 @@ main:		la     	x10,sseg
 
 
 init:		li 		x12,0			# master counter
-		lw 		x13,0(0x10)		# ones
+		lw 		x13,0(x10)		# ones
 		li 		x14,0xFF		# tens			
 		li 		x15,0xFF		# off SSEG
 		li		x16,0			# output anode				
