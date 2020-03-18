@@ -1,8 +1,8 @@
 .data
-sseg:		.space 	10 				# Save space for 10-byte lookup table
+sseg:		.space 		10 			# Save space for 10-byte lookup table
 
 .text 
-main:		la     	x10,sseg
+main:		la     		x10,sseg
 		li     		x11,0x03
 		sb     		x11,0(x10)
 		li     		x11,0x9F
