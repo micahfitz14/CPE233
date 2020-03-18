@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Mar 16 16:09:54 2020
-| Host         : DESKTOP-B3USB5J running 64-bit major release  (build 9200)
+| Date         : Wed Mar 18 14:23:53 2020
+| Host         : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
 | Command      : report_drc -file OTTER_Wrapper_drc_routed.rpt -pb OTTER_Wrapper_drc_routed.pb -rpx OTTER_Wrapper_drc_routed.rpx
 | Design       : OTTER_Wrapper
 | Device       : xc7a35tcpg236-1
@@ -65,32 +65,32 @@ Related violations: <none>
 
 REQP-1839#3 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#4 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#5 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#6 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#7 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#8 Warning
 RAMB36 async control check  
-The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 my_otter/otter_memory/memory_reg_bram_10 has an input control pin my_otter/otter_memory/memory_reg_bram_10/ADDRARDADDR[13] (net: my_otter/otter_memory/IOBUS_addr[10]) which is driven by a register (my_otter/pc/MY_CNTR/count_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#9 Warning

@@ -1,8 +1,8 @@
 .data
-sseg:		.space 		10 			# Save space for 10-byte lookup table
+sseg:		.space 	10 				# Save space for 10-byte lookup table
 
 .text 
-main:		la     		x10,sseg
+main:		la     	x10,sseg
 		li     		x11,0x03
 		sb     		x11,0(x10)
 		li     		x11,0x9F
@@ -26,8 +26,8 @@ main:		la     		x10,sseg
 
 
 init:		li 		x12,0			# master counter
-		lw 		x13,0(x10)		# ones
-		li 		x14,0xFF		# tens			
+		li 		x13,0			# ones
+		li 		x14,0			# tens			
 		li 		x15,0xFF		# off SSEG
 		li		x16,0			# output anode				
 		li 		x20,0x111C0000 		# anode address
