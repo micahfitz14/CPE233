@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1584566498">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1584570675">
   <File Type="PA-TCL" Name="OTTER_Wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="OTTER_Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_Wrapper_reports.tcl"/>

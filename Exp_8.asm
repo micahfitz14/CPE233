@@ -1,8 +1,8 @@
 .data
-sseg:		.space 	10 				# Save space for 10-byte lookup table
+sseg:		.space 		10 			# Save space for 10-byte lookup table
 
 .text 
-main:		la     	x10,sseg
+main:		la     		x10,sseg
 		li     		x11,0x03
 		sb     		x11,0(x10)
 		li     		x11,0x9F
@@ -26,10 +26,11 @@ main:		la     	x10,sseg
 
 
 init:		li 		x12,0			# master counter
-		li 		x13,0			# ones
-		li 		x14,0			# tens			
+		lb 		x13,0(x10)		# ones
+		li		x14,0xFF		# tens			
 		li 		x15,0xFF		# off SSEG
-		li		x16,0			# output anode				
+		li		x16,0			# output anode
+		li		x17,0x32		# master counter cap			
 		li 		x20,0x111C0000 		# anode address
 		li 		x21,0x110C0000		# cathode address
 		li		x22,1			# interrupt stuff
@@ -72,10 +73,18 @@ aloop:		li		x16,0xF			# turn off anode
 #------------------------------------------------------------
 # ISR
 #------------------------------------------------------------
-ISR:		lw		x13,0(x10)
-		lw		x14,1(x10)
-		csrrw 		x0,mie,x22
+ISR:		addi		x12,x12,1
+		beq		x12,x17,RST
+		
+		
+FINISH:		csrrw 		x0,mie,x22
 		mret
+
+RST:		li		x12,0
+		lb 		x13,0(x10)		# ones
+		li		x14,0xFF		# tens
+		j		FINISH
+		
 
 #------------------------------------------------------------ 
 # Subroutine: delay_ff

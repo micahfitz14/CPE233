@@ -11,18 +11,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1239085240fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="4748774830000fs"></ZoomStartTime>
+      <ZoomEndTime time="4805724830001fs"></ZoomEndTime>
+      <Cursor1Time time="10001000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="174"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="/Otter_Wrapper_TB/CLK" type="logic">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/clkDIv/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/pc/address" type="array">
+      <obj_property name="ElementShortName">address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">address[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/cu_fsm/OPCODE" type="array">
+      <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
+      <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/CATHODES" type="array">
       <obj_property name="ElementShortName">CATHODES[7:0]</obj_property>
@@ -52,16 +60,45 @@
       <obj_property name="ElementShortName">RST</obj_property>
       <obj_property name="ObjectShortName">RST</obj_property>
    </wvobject>
-   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/cu_fsm/OPCODE" type="array">
-      <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
-      <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/cu_fsm/PS" type="array">
       <obj_property name="ElementShortName">PS[2:0]</obj_property>
       <obj_property name="ObjectShortName">PS[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/pc/address" type="array">
-      <obj_property name="ElementShortName">address[31:0]</obj_property>
-      <obj_property name="ObjectShortName">address[31:0]</obj_property>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[10]" type="array">
+      <obj_property name="ElementShortName">[10][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[11]" type="array">
+      <obj_property name="ElementShortName">[11][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[13]" type="array">
+      <obj_property name="ElementShortName">[13][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[13][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[14]" type="array">
+      <obj_property name="ElementShortName">[14][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[14][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/register/reg_file[15]" type="array">
+      <obj_property name="ElementShortName">[15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[15][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/my_csr/INT_TAKEN" type="logic">
+      <obj_property name="ElementShortName">INT_TAKEN</obj_property>
+      <obj_property name="ObjectShortName">INT_TAKEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/my_csr/CSR_MEPC" type="array">
+      <obj_property name="ElementShortName">CSR_MEPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CSR_MEPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/my_csr/CSR_MTVEC" type="array">
+      <obj_property name="ElementShortName">CSR_MTVEC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CSR_MTVEC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Otter_Wrapper_TB/my_otter_wrapper/my_otter/my_csr/CSR_MIE" type="logic">
+      <obj_property name="ElementShortName">CSR_MIE</obj_property>
+      <obj_property name="ObjectShortName">CSR_MIE</obj_property>
    </wvobject>
 </wave_config>

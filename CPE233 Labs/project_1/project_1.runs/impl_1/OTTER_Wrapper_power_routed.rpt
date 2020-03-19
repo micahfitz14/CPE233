@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Mar 18 14:23:57 2020
+| Date             : Wed Mar 18 15:33:42 2020
 | Host             : DESKTOP-GK9T8HV running 64-bit major release  (build 9200)
 | Command          : report_power -file OTTER_Wrapper_power_routed.rpt -pb OTTER_Wrapper_power_summary_routed.pb -rpx OTTER_Wrapper_power_routed.rpx
 | Design           : OTTER_Wrapper
@@ -54,7 +54,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
 | Slice Logic              |    <0.001 |     2425 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1644 |     20800 |            7.90 |
+|   LUT as Logic           |    <0.001 |     1646 |     20800 |            7.91 |
 |   Register               |    <0.001 |      230 |     41600 |            0.55 |
 |   CARRY4                 |    <0.001 |       75 |      8150 |            0.92 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
