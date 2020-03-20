@@ -48,18 +48,19 @@ module Otter_Wrapper_TB();
      initial        
           begin           
                BTNC=1; // reset signal on
+               BTNL=0;
                
                #40
                
                BTNC = 0;
                
-               #100;
-               forever
-               begin
-               BTNL=1;
-               #40
+               #10000;
+               
+               BTNL=1;      //interrupt button
+               
+               #200
+               
                BTNL=0;
-               #100;
-               end
+                             
           end
 endmodule
